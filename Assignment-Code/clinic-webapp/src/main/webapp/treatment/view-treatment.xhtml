@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+
+<!-- https://balusc.omnifaces.org/2021/11/whats-new-in-faces-40.html -->
+
+<html
+		xmlns:faces="jakarta.faces"
+		xmlns:ui="jakarta.faces.facelets"
+		xmlns:f="jakarta.faces.core"
+		xmlns:h="jakarta.faces.html"
+		xmlns:pt="jakarta.faces.passthrough"
+		xmlns:cc="jakarta.faces.composite"
+		xmlns:c="jakarta.tags.core"
+		xmlns:fn="jakarta.tags.functions">
+
+<ui:composition template="../WEB-INF/templates/template.xhtml">
+	<ui:define name="title">#{bundle['patients.title']}</ui:define>
+
+	<ui:define name="content">
+		<f:metadata>
+			<f:viewParam name="id" value="#{treatmentBacking.id}" />
+			<!-- Expect one of the following, depending on where the access is coming from. -->
+			<f:viewParam name="patientId" value="#{treatmentBacking.patientId}" />
+			<f:viewParam name="providerId" value="#{treatmentBacking.providerId}" />
+			<!-- You would normally also convert/validate it here. -->
+			<f:viewAction action="#{treatmentBacking.load()}" />
+		</f:metadata>
+
+		<h2 align="center">
+			<h:outputText value="#{bundle['treatment.header']}" />
+		</h2>
+
+		<p align="center">
+			<h:panelGrid columns="2">
+
+				<h:outputLabel for="type">
+					#{bundle['treatment.type']}:
+				</h:outputLabel>
+				<h:outputText id="type" value="#{treatmentBacking.type}" />
+
+				<h:outputLabel for="patient">
+					#{bundle['treatment.patient.name']}:
+				</h:outputLabel>
+				<h:link outcome="view-patient">
+					<f:param name="id" value="#{treatmentBacking.patientId}" />
+					<h:outputText id="patient" value="#{treatmentBacking.patientName}" />
+				</h:link>
+
+				<h:outputLabel for="provider">
+					#{bundle['treatment.provider.name']}:
+				</h:outputLabel>
+				<h:link outcome="view-provider">
+					<f:param name="id" value="#{treatmentBacking.providerId}" />
+					<h:outputText id="provider"
+						value="#{treatmentBacking.providerName}" />
+				</h:link>
+
+				<h:outputLabel for="diagnosis">
+					#{bundle['treatment.diagnosis']}
+				</h:outputLabel>
+				<h:outputText id="diagnosis" value="#{treatmentBacking.diagnosis}" />
+
+				<ui:fragment rendered="#{treatmentBacking.drugTreatment}">
+
+					<p align="center">
+						<h:panelGrid columns="2">
+
+							<h:outputLabel for="drug">
+								#{bundle['treatment.drug']}:
+							</h:outputLabel>
+							<h:outputText id="drug" value="#{treatmentBacking.drug}" />
+
+							<h:outputLabel for="dosage">
+								#{bundle['treatment.dosage']}:
+							</h:outputLabel>
+							<h:outputText id="dosage" value="#{treatmentBacking.dosage}" />
+
+							<h:outputLabel for="frequency">
+								#{bundle['treatment.frequency']}:
+							</h:outputLabel>
+							<h:outputText id="frequency"
+								value="#{treatmentBacking.frequency}" />
+
+							<h:outputLabel for="start-date">
+								#{bundle['treatment.start.date']}:
+							</h:outputLabel>
+							<h:outputText id="start-date"
+								value="#{treatmentBacking.startDate}">
+								<f:convertDateTime type="localDate" pattern="yyyy-MM-dd" />
+							</h:outputText>
+
+							<h:outputLabel for="end-date">
+								#{bundle['treatment.end.date']}:
+							</h:outputLabel>
+							<h:outputText id="end-date" value="#{treatmentBacking.endDate}">
+								<f:convertDateTime type="localDate" pattern="yyyy-MM-dd" />
+							</h:outputText>
+
+						</h:panelGrid>
+					</p>
+
+				</ui:fragment>
+
+				<ui:fragment rendered="#{treatmentBacking.surgeryTreatment}">
+
+					<p align="center">
+						<h:panelGrid columns="2">
+
+							<h:outputLabel for="surgery-date">
+								#{bundle['treatment.surgery.date']}:
+							</h:outputLabel>
+							<h:outputText id="surgery-date"
+								value="#{treatmentBacking.surgeryDate}">
+								<f:convertDateTime type="localDate" pattern="yyyy-MM-dd" />
+							</h:outputText>
+
+							<h:outputLabel for="surgery-discharge">
+								#{bundle['treatment.surgery.dischargeinstructions']}:
+							</h:outputLabel>
+							<h:outputText id="surgery-discharge"
+								value="#{treatmentBacking.dischargeInstructions}" />
+
+						</h:panelGrid>
+					</p>
+
+				</ui:fragment>
+
+			</h:panelGrid>
+
+			<ui:fragment rendered="#{treatmentBacking.radiologyTreatment}">
+
+				<p align="center">
+					<h:dataTable id="radiology-dates" styleClass="gridTable"
+						summary="#{bundle['treatment.radiology.dates']}"
+						value="#{treatmentBacking.treatmentDates}" var="date">
+
+						<h:column>
+							<f:facet name="header">
+								<h:outputText value="#{bundle['treatment.radiology.dates']}" />
+							</f:facet>
+							<h:outputText id="radiology-date" value="#{date}">
+								<f:convertDateTime type="localDate" pattern="yyyy-MM-dd" />
+							</h:outputText>
+						</h:column>
+
+					</h:dataTable>
+				</p>
+
+			</ui:fragment>
+
+			<ui:fragment rendered="#{treatmentBacking.physiotherapyTreatment}">
+
+				<p align="center">
+					<h:dataTable id="physiotherapy-dates" styleClass="gridTable"
+						summary="#{bundle['treatment.physiotherapy.dates']}"
+						value="#{treatmentBacking.treatmentDates}" var="date">
+
+						<h:column>
+							<f:facet name="header">
+								<h:outputText value="#{bundle['treatment.physiotherapy.date']}" />
+							</f:facet>
+							<h:outputText id="physiotherapy-date" value="#{date}">
+								<f:convertDateTime type="localDate" pattern="yyyy-MM-dd" />
+							</h:outputText>
+						</h:column>
+
+					</h:dataTable>
+				</p>
+
+			</ui:fragment>
+
+		</p>
+
+		<ui:fragment rendered="#{treatmentBacking.hasFollowupTreatments()}">
+
+
+			<p align="center">
+				<h:dataTable id="followups" styleClass="gridTable"
+					summary="#{bundle['treatment.followup.summary']}"
+					value="#{treatmentBacking.followupTreatments}" var="treatment">
+
+					<h:column>
+						<f:facet name="header">
+							<h:outputText value="#{bundle['treatment.followup.type']}" />
+						</f:facet>
+						<h:link outcome="view-treatment">
+							<f:param name="id" value="#{treatment.id}" />
+							<f:param name="patientId" value="#{treatment.patientId}" />
+							<f:param name="providertId" value="#{treatment.providerId}" />
+							<h:outputText id="treatment-type" size="20"
+								value="#{treatmentBacking.getTreatmentType(treatment)}" />
+						</h:link>
+					</h:column>
+					<h:column>
+						<f:facet name="header">
+							<h:outputText value="#{bundle['treatment.followup.patient']}" />
+						</f:facet>
+						<h:link outcome="view-patient">
+							<f:param name="id" value="#{treatment.patientId}" />
+							<h:outputText id="patient" size="20"
+								value="#{treatment.patientName}" />
+						</h:link>
+					</h:column>
+					<h:column>
+						<f:facet name="header">
+							<h:outputText value="#{bundle['treatment.followup.provider']}" />
+						</f:facet>
+						<h:link outcome="view-provider">
+							<f:param name="id" value="#{treatment.providerId}" />
+							<h:outputText id="provider" size="20"
+								value="#{treatment.providerName}" />
+						</h:link>
+					</h:column>
+					<f:facet name="caption">
+						<h:outputText value="#{bundle['treatment.followup.caption']}" />
+					</f:facet>
+				</h:dataTable>
+			</p>
+
+		</ui:fragment>
+
+		<p align="center">
+			<h:messages globalOnly="true" style="color: red" />
+		</p>
+
+	</ui:define>
+</ui:composition>
+</html>

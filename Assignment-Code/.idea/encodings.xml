@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/clinic-domain/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/clinic-domain/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/clinic-dto/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/clinic-dto/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/clinic-init/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/clinic-init/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/clinic-microservice-client/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/clinic-microservice-client/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/clinic-microservice/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/clinic-microservice/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/clinic-rest-client/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/clinic-rest-client/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/clinic-rest/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/clinic-rest/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/clinic-root/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/clinic-root/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/clinic-service-client/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/clinic-service-client/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/clinic-webapp/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/clinic-webapp/src/main/resources" charset="UTF-8" />
+  </component>
+</project>

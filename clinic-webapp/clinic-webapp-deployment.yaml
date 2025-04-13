@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: clinic-webapp
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: clinic-webapp
+  template:
+    metadata:
+      labels:
+        app: clinic-webapp
+    spec:
+      restartPolicy: Always
+      containers:
+      - name: clinic-webapp
+        image: 600627343360.dkr.ecr.us-east-2.amazonaws.com/clinic-webapp
+        imagePullPolicy: Always

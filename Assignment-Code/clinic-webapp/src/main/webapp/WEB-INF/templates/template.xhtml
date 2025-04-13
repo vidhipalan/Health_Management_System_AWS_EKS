@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<!-- https://balusc.omnifaces.org/2021/11/whats-new-in-faces-40.html -->
+
+<html
+		xmlns:faces="jakarta.faces"
+		xmlns:ui="jakarta.faces.facelets"
+		xmlns:f="jakarta.faces.core"
+		xmlns:h="jakarta.faces.html"
+		xmlns:pt="jakarta.faces.passthrough"
+		xmlns:cc="jakarta.faces.composite"
+		xmlns:c="jakarta.tags.core"
+		xmlns:fn="jakarta.tags.functions">
+
+<h:head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width" />
+<h:outputStylesheet library="default" name="css/Site.css"/>
+<link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+<title><ui:insert name="title">Default title</ui:insert></title>
+
+</h:head>
+
+
+<h:body class="twoColumnHdrFtr">
+
+	<div id="container">
+		<header id="header">
+			<h1>
+				<h:graphicImage 
+					alt="[Medcc Banner]"
+					library="default"
+					name="images/meddc-banner.gif" />
+			</h1>
+		</header>
+
+		<nav id="nav">
+			<ul>
+				<li><h:link outcome="view-patients">#{bundle['nav.patients']}</h:link></li>
+				<li><h:link outcome="view-providers">#{bundle['nav.providers']}</h:link></li>
+			</ul>
+		</nav>
+
+		<aside id="sidebar">
+			<h1>Links</h1>
+			<p>
+				<h:outputLink value="http://www.dominicduggan.org">My home page</h:outputLink>
+			</p>
+			<p>
+				<h:outputLink value="http://www.stevens.edu">Stevens home page</h:outputLink>
+			</p>
+		</aside>
+		
+		<article id="content">
+			<ui:insert name="content">
+    			Content area.  See comments below this line in the source.
+    			<!--  include your content file or uncomment the include below and create content.html in this directory -->
+				<!-- <div> -->
+				<!-- <ui:include src="content.html"/> -->
+				<!-- </div> -->
+			</ui:insert>
+		</article>
+		
+		<footer id="footer">
+			<p><h:outputText value="&#xA9;  Your Name Here"/></p>
+		</footer>
+	</div>
+
+</h:body>
+
+</html>

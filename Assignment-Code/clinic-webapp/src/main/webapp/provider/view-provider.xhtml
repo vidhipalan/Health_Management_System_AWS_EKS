@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+
+<!-- https://balusc.omnifaces.org/2021/11/whats-new-in-faces-40.html -->
+
+<html
+		xmlns:faces="jakarta.faces"
+		xmlns:ui="jakarta.faces.facelets"
+		xmlns:f="jakarta.faces.core"
+		xmlns:h="jakarta.faces.html"
+		xmlns:pt="jakarta.faces.passthrough"
+		xmlns:cc="jakarta.faces.composite"
+		xmlns:c="jakarta.tags.core"
+		xmlns:fn="jakarta.tags.functions">
+
+<ui:composition template="../WEB-INF/templates/template.xhtml">
+	<ui:define name="title">#{bundle['provider.title']}</ui:define>
+
+	<ui:define name="content">
+		<f:metadata>
+			<!-- Query string parameter for provider id -->
+			<f:viewParam name="id" value="#{providerBacking.id}" />
+			<!-- Load the provider record from the database. -->
+			<f:viewAction action="#{providerBacking.load()}" />
+		</f:metadata>
+
+		<h2 align="center">
+			<h:outputText value="#{bundle['provider.header']}" />
+		</h2>
+
+		<p align="center">
+			<h:panelGrid columns="2">
+				<h:outputLabel for="providerId">
+        				#{bundle['provider.id']}:
+    				</h:outputLabel>
+				<h:outputText id="providerId" value="#{providerBacking.id}" />
+
+				<h:outputLabel for="providerName">
+        				#{bundle['provider.name']}:
+    				</h:outputLabel>
+				<h:outputText id="providerName" value="#{providerBacking.name}" />
+
+				<h:outputLabel for="providerNpi">
+        				#{bundle['provider.npi']}:
+    				</h:outputLabel>
+				<h:outputText id="providerNpi" value="#{providerBacking.npi}" />
+			</h:panelGrid>
+		</p>
+
+		<p align="center">
+			<h:dataTable id="treatments"
+				summary="#{bundle['provider.treatment.caption']}"
+				styleClass="gridTable" value="#{providerBacking.treatments}"
+				var="treatment">
+				<h:column>
+					<f:facet name="header">
+						<h:outputText value="#{bundle['provider.treatment.type']}" />
+					</f:facet>
+					<h:link outcome="view-treatment">
+						<f:param name="id" value="#{treatment.id}" />
+						<f:param name="providerId" value="#{treatment.providerId}" />
+						<h:outputText id="treatment" size="20"
+							value="#{providerBacking.getTreatmentType(treatment)}" />
+					</h:link>
+					<h:message for="treatment" />
+				</h:column>
+				<h:column>
+					<f:facet name="header">
+						<h:outputText value="#{bundle['provider.treatment.diagnosis']}" />
+					</f:facet>
+					<h:outputText id="diagnosis" size="20"
+						value="#{treatment.diagnosis}" />
+					<h:message for="diagnosis" />
+				</h:column>
+				<h:column>
+					<f:facet name="header">
+						<h:outputText value="#{bundle['provider.treatment.patient']}" />
+					</f:facet>
+					<h:link outcome="view-patient">
+						<f:param name="id" value="#{treatment.patientId}" />
+						<h:outputText id="patient" size="20"
+							value="#{treatment.patientName}" />
+					</h:link>
+					<h:message for="patient" />
+				</h:column>
+				<f:facet name="caption">
+					<h:outputText value="#{bundle['provider.treatment.caption']}" />
+				</f:facet>
+			</h:dataTable>
+		</p>
+
+		<p align="center">
+			<h:messages globalOnly="true" style="color: red" />
+		</p>
+
+	</ui:define>
+</ui:composition>
+</html>

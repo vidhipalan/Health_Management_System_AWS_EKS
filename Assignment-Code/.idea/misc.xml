@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/clinic-dto/pom.xml" />
+        <option value="$PROJECT_DIR$/clinic-init/pom.xml" />
+        <option value="$PROJECT_DIR$/clinic-rest/pom.xml" />
+        <option value="$PROJECT_DIR$/clinic-root/pom.xml" />
+        <option value="$PROJECT_DIR$/clinic-domain/pom.xml" />
+        <option value="$PROJECT_DIR$/clinic-webapp/pom.xml" />
+        <option value="$PROJECT_DIR$/clinic-rest-client/pom.xml" />
+        <option value="$PROJECT_DIR$/clinic-microservice/pom.xml" />
+        <option value="$PROJECT_DIR$/clinic-service-client/pom.xml" />
+        <option value="$PROJECT_DIR$/clinic-microservice-client/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_21" default="true" project-jdk-name="homebrew-21" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>

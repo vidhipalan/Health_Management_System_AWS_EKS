@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pageflow:Pageflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf16650559112910" configfile="/clinic-webapp/src/main/webapp/WEB-INF/faces-config.xml">
+  <nodes xsi:type="pageflow:PFPage" name="login.xhtml" x="338" y="1351" id="pf16650561640828" referenceLink="//@navigationRule.0/@fromViewId|" outlinks="pf16661878399080 pf16661878399081 pf16661878399082 pf16661878399083 pf16661878399084" path="/*"/>
+  <nodes xsi:type="pageflow:PFPage" name="patient/view-patients.xhtml" id="pf16660706907912" referenceLink="//@navigationRule.0/@navigationCase.0/@toViewId|" inlinks="pf16661878399080" path="/patient/view-patients.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="provider/view-providers.xhtml" id="pf16660706907914" referenceLink="//@navigationRule.0/@navigationCase.1/@toViewId|" inlinks="pf16661878399081" path="/provider/view-providers.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="patient/view-patient.xhtml" id="pf16660706907916" referenceLink="//@navigationRule.0/@navigationCase.1/@toViewId|" inlinks="pf16661878399083" path="/patient/view-patient.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="treatment/view-treatment.xhtml" id="pf166607069079111" referenceLink="//@navigationRule.0/@navigationCase.2/@toViewId|" inlinks="pf16661878399082" path="/treatment/view-treatment.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="provider/view-provider.xhtml" id="pf166607069079115" referenceLink="//@navigationRule.0/@navigationCase.3/@toViewId|" inlinks="pf16661878399084" path="/provider/view-provider.xhtml"/>
+  <links id="pf16661878399080" target="pf16660706907912" source="pf16650561640828" outcome="view-patients"/>
+  <links id="pf16661878399081" target="pf16660706907914" source="pf16650561640828" outcome="view-providers"/>
+  <links id="pf16661878399082" target="pf166607069079111" source="pf16650561640828" outcome="view-treatment"/>
+  <links id="pf16661878399083" target="pf16660706907916" source="pf16650561640828" outcome="view-patient"/>
+  <links id="pf16661878399084" target="pf166607069079115" source="pf16650561640828" outcome="view-provider"/>
+</pageflow:Pageflow>

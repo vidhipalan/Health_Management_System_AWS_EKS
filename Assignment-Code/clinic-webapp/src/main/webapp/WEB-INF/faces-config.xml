@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<faces-config
+		xmlns="https://jakarta.ee/xml/ns/jakartaee"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee
+        https://jakarta.ee/xml/ns/jakartaee/web-facesconfig_4_0.xsd"
+		version="4.0">
+
+	<!-- https://jakarta.ee/specifications/faces/4.0/jakarta-faces-4.0.html#a6254 -->
+
+	<!-- This part defines the internationalization for the app. -->
+	<application>
+		<!-- Locales for languages supported by the app.  There should be Messages_fr -->
+		<!-- for diagnostic messages in Frnech, Messages_cn for Chinese, etc.   	  -->
+		<locale-config>
+			<default-locale>en</default-locale>
+			<!-- <supported-locale>fr</supported-locale> -->
+		</locale-config>
+		<!-- This defines the default name of the file that contains diagnostic messages -->
+		<!-- The facelet variable 'bundle" can be used to reference messages as  -->
+		<!-- properties in actions in web pages. -->
+		<resource-bundle>
+			<base-name>Messages</base-name>
+			<var>bundle</var>
+		</resource-bundle>
+	</application>
+
+	<!-- These rules define the navigational structure of the Web app.  Each action method  -->
+	<!-- returns a navigation string, and this navigation logic determines what is the next -->
+	<!-- web page that should be displayed next.  -->
+	
+	<navigation-rule>
+		<from-view-id>/*</from-view-id>
+		<navigation-case>
+			<from-outcome>view-patients</from-outcome>
+			<to-view-id>/patient/view-patients.xhtml</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-outcome>view-patient</from-outcome>
+			<to-view-id>/patient/view-patient.xhtml</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-outcome>view-providers</from-outcome>
+			<to-view-id>/provider/view-providers.xhtml</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-outcome>view-provider</from-outcome>
+			<to-view-id>/provider/view-provider.xhtml</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-outcome>view-treatment</from-outcome>
+			<to-view-id>/treatment/view-treatment.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+	
+</faces-config>

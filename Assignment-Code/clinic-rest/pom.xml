@@ -1,0 +1,100 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>clinic-rest</artifactId>
+    <packaging>war</packaging>
+
+    <parent>
+        <groupId>edu.stevens.cs548</groupId>
+        <artifactId>clinic-root</artifactId>
+        <version>1.0.0</version>
+        <relativePath>../clinic-root/pom.xml</relativePath>
+    </parent>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+        <app.name>clinic-rest</app.name>
+    </properties>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-antrun-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>run</goal>
+                        </goals>
+                        <configuration>
+                            <target>
+                                <delete file="${dist.dir}/${app.name}.war"/>
+                                <copy file="${project.build.directory}/${project.build.finalName}.war"
+                                      tofile="${dist.dir}/${app.name}.war"/>
+                            </target>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+    <dependencies>
+        <dependency>
+            <groupId>edu.stevens.cs548</groupId>
+            <artifactId>clinic-dto</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>edu.stevens.cs548</groupId>
+            <artifactId>clinic-service-client</artifactId>
+        </dependency>
+
+        <!-- For monolithic app -->
+<!--        <dependency>-->
+<!--            <groupId>edu.stevens.cs548</groupId>-->
+<!--            <artifactId>clinic-service</artifactId>-->
+<!--        </dependency>-->
+
+        <!-- For microservice app -->
+        		<dependency>
+        			<groupId>edu.stevens.cs548</groupId>
+        			<artifactId>clinic-microservice-client</artifactId>
+        		</dependency>
+
+        <dependency>
+            <groupId>jakarta.platform</groupId>
+            <artifactId>jakarta.jakartaee-api</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+        </dependency>
+
+        <!--  Gson: Java to JSON conversion -->
+        <dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.glassfish.jersey.core</groupId>
+            <artifactId>jersey-server</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.glassfish.jersey.media</groupId>
+            <artifactId>jersey-media-json-gson</artifactId>
+        </dependency>
+    </dependencies>
+</project>

@@ -1,0 +1,127 @@
+[2025-04-13T17:24:00.122+0000] [] [[1;93mWARNING[0m] [] [[1;94mPayaraMicro[0m] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1744565040122] [levelValue: 900] Payara Micro Runtime directory is located in a temporary file location which can be cleaned by system processes.
+
+[2025-04-13T17:24:00.194+0000] [] [[1;92mINFO[0m] [] [[1;94mPayaraMicro[0m] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1744565040194] [levelValue: 800] Payara Micro Runtime directory is located at /tmp/payaramicro-rt16193457847355052427tmp
+
+[2025-04-13T17:24:00.222+0000] [] [[1;92mINFO[0m] [] [[1;94mfish.payara.micro.boot.runtime.PayaraMicroRuntimeBuilder[0m] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1744565040222] [levelValue: 800] Built Payara Micro Runtime
+
+[2025-04-13T17:24:01.967+0000] [] [[1;92mINFO[0m] [] [[1;94mfish.payara.boot.runtime.BootCommand[0m] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1744565041967] [levelValue: 800] [[
+  Boot Command set returned with result SUCCESS : PlainTextActionReporterSUCCESSDescription: set AdminCommandnull
+    configs.config.server-config.hazelcast-config-specific-configuration.lite=false
+]]
+
+[2025-04-13T17:24:02.001+0000] [] [[1;92mINFO[0m] [] [[1;94mfish.payara.boot.runtime.BootCommand[0m] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1744565042001] [levelValue: 800] [[
+  Boot Command set returned with result SUCCESS : PlainTextActionReporterSUCCESSDescription: set AdminCommandnull
+    hazelcast-runtime-configuration.host-aware-partitioning=true
+]]
+
+[2025-04-13T17:24:02.011+0000] [] [[1;92mINFO[0m] [] [[1;94mfish.payara.boot.runtime.BootCommand[0m] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1744565042011] [levelValue: 800] [[
+  Boot Command set returned with result SUCCESS : PlainTextActionReporterSUCCESSDescription: set AdminCommandnull
+    hazelcast-runtime-configuration.discovery-mode=multicast
+]]
+
+[2025-04-13T17:24:03.071+0000] [] [[1;92mINFO[0m] [] [[1;94morg.glassfish.ha.store.spi.BackingStoreFactoryRegistry[0m] [tid: _ThreadID=33 _ThreadName=RunLevelControllerThread-1744565042593] [timeMillis: 1744565043071] [levelValue: 800] Registered fish.payara.ha.hazelcast.store.HazelcastBackingStoreFactoryProxy for persistence-type = hazelcast in BackingStoreFactoryRegistry
+
+[2025-04-13T17:24:07.368+0000] [] [[1;92mINFO[0m] [] [[1;94mfish.payara.nucleus.hazelcast.HazelcastCore[0m] [tid: _ThreadID=31 _ThreadName=RunLevelControllerThread-1744565042027] [timeMillis: 1744565047368] [levelValue: 800] Hazelcast Instance Bound to JNDI at payara/Hazelcast
+
+[2025-04-13T17:24:07.368+0000] [] [[1;92mINFO[0m] [] [[1;94mfish.payara.nucleus.hazelcast.HazelcastCore[0m] [tid: _ThreadID=31 _ThreadName=RunLevelControllerThread-1744565042027] [timeMillis: 1744565047368] [levelValue: 800] JSR107 Caching Provider Bound to JNDI at payara/CachingProvider
+
+[2025-04-13T17:24:07.369+0000] [] [[1;92mINFO[0m] [] [[1;94mfish.payara.nucleus.hazelcast.HazelcastCore[0m] [tid: _ThreadID=31 _ThreadName=RunLevelControllerThread-1744565042027] [timeMillis: 1744565047369] [levelValue: 800] JSR107 Default Cache Manager Bound to JNDI at payara/CacheManager
+
+[2025-04-13T17:24:07.635+0000] [] [[1;92mINFO[0m] [NCLS-CORE-00101] [[1;94mjavax.enterprise.system.core[0m] [tid: _ThreadID=31 _ThreadName=RunLevelControllerThread-1744565042027] [timeMillis: 1744565047635] [levelValue: 800] Network Listener http-listener started in: 19ms - bound to [/0.0.0.0:8080]
+
+[2025-04-13T17:24:07.638+0000] [] [[1;92mINFO[0m] [NCLS-CORE-00058] [[1;94mjavax.enterprise.system.core[0m] [tid: _ThreadID=31 _ThreadName=RunLevelControllerThread-1744565042027] [timeMillis: 1744565047638] [levelValue: 800] Network listener https-listener on port 8443 disabled per domain.xml
+
+[2025-04-13T17:24:07.639+0000] [] [[1;92mINFO[0m] [NCLS-CORE-00087] [[1;94mjavax.enterprise.system.core[0m] [tid: _ThreadID=31 _ThreadName=RunLevelControllerThread-1744565042027] [timeMillis: 1744565047639] [levelValue: 800] Grizzly 4.0.0 started in: 4,972ms - bound to [http-listener:8080]
+
+[2025-04-13T17:24:07.804+0000] [] [[1;92mINFO[0m] [] [[1;94mio.opentelemetry.api.GlobalOpenTelemetry[0m] [tid: _ThreadID=32 _ThreadName=RunLevelControllerThread-1744565042028] [timeMillis: 1744565047804] [levelValue: 800] AutoConfiguredOpenTelemetrySdk found on classpath but automatic configuration is disabled. To enable, run your JVM with -Dotel.java.global-autoconfigure.enabled=true
+
+[2025-04-13T17:24:07.912+0000] [] [[1;92mINFO[0m] [] [[1;94mfish.payara.nucleus.cluster.PayaraCluster[0m] [tid: _ThreadID=77 _ThreadName=Executor-Service-1] [timeMillis: 1744565047912] [levelValue: 800] [[
+  Data Grid Status 
+Payara Data Grid State: DG Version: 5 DG Name: development DG Size: 1
+Instances: {
+ DataGrid: development Name: Smiling-Flyingfish Lite: false This: true UUID: 47c775c0-8f71-46fc-8c6a-f089a1cbc125 Address: /192.168.30.82:6900
+}]]
+
+[2025-04-13T17:24:07.933+0000] [] [[1;92mINFO[0m] [NCLS-CORE-00017] [[1;94mjavax.enterprise.system.core[0m] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1744565047933] [levelValue: 800] Payara Micro 6.2025.1 #badassmicrofish (28) startup time : Embedded (1,786ms), startup services(5,921ms), total(7,707ms)
+
+[2025-04-13T17:24:08.162+0000] [] [[1;92mINFO[0m] [NCLS-JMX-00006] [[1;94mjavax.enterprise.system.jmx[0m] [tid: _ThreadID=90 _ThreadName=Thread-11] [timeMillis: 1744565048162] [levelValue: 800] JMXStartupService has disabled JMXConnector system
+
+[2025-04-13T17:24:09.614+0000] [] [[1;92mINFO[0m] [] [[1;94mjavax.enterprise.system.core[0m] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1744565049614] [levelValue: 800] No deployment transformer implementation found.
+
+[2025-04-13T17:24:10.119+0000] [] [[1;92mINFO[0m] [NCLS-SECURITY-01002] [[1;94mjavax.enterprise.system.core.security[0m] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1744565050119] [levelValue: 800] Java security manager is disabled.
+
+[2025-04-13T17:24:10.120+0000] [] [[1;92mINFO[0m] [NCLS-SECURITY-01010] [[1;94mjavax.enterprise.system.core.security[0m] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1744565050120] [levelValue: 800] Entering Security Startup Service.
+
+[2025-04-13T17:24:10.121+0000] [] [[1;92mINFO[0m] [NCLS-SECURITY-01143] [[1;94mjavax.enterprise.system.core.security[0m] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1744565050121] [levelValue: 800] Loading policy provider fish.payara.security.jacc.provider.PolicyProviderImpl.
+
+[2025-04-13T17:24:10.156+0000] [] [[1;92mINFO[0m] [NCLS-SECURITY-01011] [[1;94mjavax.enterprise.system.core.security[0m] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1744565050156] [levelValue: 800] Security Service(s) started successfully.
+
+[2025-04-13T17:24:10.700+0000] [] [[1;92mINFO[0m] [AS-WEB-GLUE-00198] [[1;94mjakarta.enterprise.web[0m] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1744565050700] [levelValue: 800] Created HTTP listener http-listener on host/port 0.0.0.0:8080
+
+[2025-04-13T17:24:10.737+0000] [] [[1;92mINFO[0m] [AS-WEB-GLUE-00200] [[1;94mjakarta.enterprise.web[0m] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1744565050737] [levelValue: 800] Created virtual server server
+
+[2025-04-13T17:24:11.280+0000] [] [[1;92mINFO[0m] [AS-WEB-GLUE-00201] [[1;94mjakarta.enterprise.web[0m] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1744565051280] [levelValue: 800] Virtual server server loaded default web module 
+
+[2025-04-13T17:24:12.929+0000] [] [[1;93mWARNING[0m] [] [[1;94mjakarta.enterprise.web.util[0m] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1744565052929] [levelValue: 900] The web application [unknown] registered the JDBC driver [org.postgresql.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+
+[2025-04-13T17:24:12.968+0000] [] [[1;92mINFO[0m] [] [[1;94morg.jboss.weld.Version[0m] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1744565052968] [levelValue: 800] WELD-000900: 5.0.1 (p1)
+
+[2025-04-13T17:24:15.859+0000] [] [[1;92mINFO[0m] [] [[1;94mfish.payara.micro.cdi.extension.ClusteredCDIEventBusImpl[0m] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1744565055859] [levelValue: 800] Clustered CDI Event bus initialized
+
+[2025-04-13T17:24:15.972+0000] [] [[1;92mINFO[0m] [] [[1;94mjavax.enterprise.system.core[0m] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1744565055972] [levelValue: 800] clinic-rest was successfully deployed in 7,657 milliseconds.
+
+[2025-04-13T17:24:15.976+0000] [] [[1;92mINFO[0m] [] [[1;94mPayaraMicro[0m] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1744565055976] [levelValue: 800] Deployed 1 archive(s)
+
+[2025-04-13T17:24:16.040+0000] [] [[1;92mINFO[0m] [AS-WEB-GLUE-00130] [[1;94mjakarta.enterprise.web[0m] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1744565056040] [levelValue: 800] Invalid Session Management Configuration for non-distributable app [clinic-rest] - defaulting to memory: persistence-type = [hazelcast] / persistenceFrequency = [web-method] / persistenceScope = [modified-session]
+
+[2025-04-13T17:24:16.133+0000] [] [[1;92mINFO[0m] [] [[1;94morg.glassfish.soteria.servlet.SamRegistrationInstaller[0m] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1744565056133] [levelValue: 800] Initializing Soteria 3.0.3.payara-p1 for context '/api'
+
+[2025-04-13T17:24:16.152+0000] [] [[1;92mINFO[0m] [] [[1;94morg.eclipse.krazo.servlet.KrazoContainerInitializer[0m] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1744565056152] [levelValue: 800] Eclipse Krazo version 3.0.1 started
+
+[2025-04-13T17:24:16.396+0000] [] [[1;92mINFO[0m] [AS-WEB-GLUE-00172] [[1;94mjakarta.enterprise.web[0m] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1744565056396] [levelValue: 800] Loading application [clinic-rest] at [/api]
+
+[2025-04-13T17:24:16.419+0000] [] [[1;92mINFO[0m] [] [[1;94mPayaraMicro[0m] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1744565056419] [levelValue: 800] [[
+  {
+    "Instance Configuration": {
+        "Host": "clinic-rest-6884c647b9-9ntxg",
+        "Http Port(s)": "8080",
+        "Https Port(s)": "",
+        "Instance Name": "Smiling-Flyingfish",
+        "Instance Group": "MicroShoal",
+        "Hazelcast Member UUID": "47c775c0-8f71-46fc-8c6a-f089a1cbc125",
+        "Deployed": [
+            {
+                "Name": "clinic-rest",
+                "Type": "war",
+                "Context Root": "/api"
+            }
+        ]
+    }
+}]]
+
+[2025-04-13T17:24:16.425+0000] [] [[1;92mINFO[0m] [] [[1;94mPayaraMicro[0m] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1744565056425] [levelValue: 800] [[
+  
+Payara Micro URLs:
+http://clinic-rest-6884c647b9-9ntxg:8080/api
+
+'clinic-rest' REST Endpoints:
+GET	/api/application.wadl
+POST	/api/patient
+GET	/api/patient/{id}
+POST	/api/provider
+GET	/api/provider/{id}
+POST	/api/provider/{id}/treatment
+GET	/api/provider/{id}/treatment/{tid}
+
+]]
+
+[2025-04-13T17:24:16.426+0000] [] [[1;92mINFO[0m] [] [[1;94mPayaraMicro[0m] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1744565056426] [levelValue: 800] Payara Micro 6.2025.1 #badassmicrofish (build 28) ready in 16,408 (ms)
+
+[2025-04-13T17:26:00.944+0000] [] [[1;92mINFO[0m] [] [[1;94medu.stevens.cs548.clinic.micro.domain.stub.PatientService[0m] [tid: _ThreadID=72 _ThreadName=http-thread-pool::http-listener(1)] [timeMillis: 1744565160944] [levelValue: 800] getPatient: Getting patient 2433c266-9167-4316-9b1e-16bc0fe9de16 in microservice client!
+
+[2025-04-13T17:26:01.478+0000] [] [[1;92mINFO[0m] [] [[1;94medu.stevens.cs548.clinic.micro.domain.GsonProvider[0m] [tid: _ThreadID=72 _ThreadName=http-thread-pool::http-listener(1)] [timeMillis: 1744565161478] [levelValue: 800] Reading object of type edu.stevens.cs548.clinic.service.dto.PatientDto (generic type edu.stevens.cs548.clinic.service.dto.PatientDto
+
+[2025-04-13T17:26:20.916+0000] [] [[1;92mINFO[0m] [] [[1;94medu.stevens.cs548.clinic.micro.domain.stub.PatientService[0m] [tid: _ThreadID=73 _ThreadName=http-thread-pool::http-listener(2)] [timeMillis: 1744565180916] [levelValue: 800] getPatient: Getting patient a3c0f6ea-d9ff-4eb6-9aa7-3869ac2d09c9 in microservice client!
+
+[2025-04-13T17:26:21.055+0000] [] [[1;92mINFO[0m] [] [[1;94medu.stevens.cs548.clinic.micro.domain.GsonProvider[0m] [tid: _ThreadID=73 _ThreadName=http-thread-pool::http-listener(2)] [timeMillis: 1744565181055] [levelValue: 800] Reading object of type edu.stevens.cs548.clinic.service.dto.PatientDto (generic type edu.stevens.cs548.clinic.service.dto.PatientDto
+

@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: clinic-domain
+  labels:
+    app: clinic-domain
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: clinic-domain
+  template:
+    metadata:
+      labels:
+        app: clinic-domain
+    spec:
+      restartPolicy: Always
+      containers:
+      - name: clinic-domain
+        image: 600627343360.dkr.ecr.us-east-2.amazonaws.com/clinic-domain
+        env:
+        - name: DATABASE_USERNAME
+          value: cs548user
+        - name: DATABASE_PASSWORD
+          value: dbuserpw
+        - name: DATABASE
+          value: cs548
+        - name: DATABASE_HOST
+          value: cs548db.c30gwcuam2rb.us-east-2.rds.amazonaws.com
+        - name: MEMORY_THRESHOLD
+          value: "10485760"
+        imagePullPolicy: Always

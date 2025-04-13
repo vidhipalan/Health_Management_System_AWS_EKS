@@ -1,0 +1,87 @@
+﻿body 
+{
+    background: #666666;
+    margin: 0;
+    padding: 0;
+    color: #000000;
+    font-family: Verdana, Arial, Helvetica, Sans-Serif;
+    font-size: 300%;
+}
+
+.twoColumnHdrFtr #container
+{
+    width: 780px;
+    margin: 0 auto;
+    background: #ffffff;
+    border: 1px solid #000000;
+    text-align: left;
+}
+
+.twoColumnHdrFtr #header
+{
+    background: #dddddd;
+    padding: 10px;
+}
+.twoColumnHdrFtr #header h1
+{
+    text-align: center;
+    margin: 0;
+    /* padding: 10px; */
+}
+
+.twoColumnHdrFtr #sidebar
+{
+    float: left;
+    width: 180px;
+    background: #ebebeb;
+    padding: 10px;
+    font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif;
+}
+.twoColumnHdrFtr #sidebar h1
+{
+    font-size: 100%;
+}
+
+#nav 
+{
+    padding:5px 10px;
+    /* background:#c99; */
+    font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif;
+    font-size: 80%;
+}
+#nav ul 
+{
+    margin:0;
+    padding:0;
+    list-style:none;
+}
+#nav li 
+{
+    display:inline;
+    margin:0;
+    padding:0 10px;
+}
+
+.twoColumnHdrFtr #content
+{
+    float: right;
+    width: 560px;
+    padding: 10px;
+    font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif;
+}
+
+.twoColumnHdrFtr #footer
+{
+    clear: both;
+    background: #dddddd;
+    padding: 10px;
+}
+
+.twoColumnHdrFtr #footer p
+{
+    padding: 10px;
+    margin: 0;
+    font-size: x-small;
+    color: #900;
+    text-align: center;
+}

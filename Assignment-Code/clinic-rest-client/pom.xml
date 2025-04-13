@@ -1,0 +1,105 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<artifactId>clinic-rest-client</artifactId>
+
+	<parent>
+		<groupId>edu.stevens.cs548</groupId>
+		<artifactId>clinic-root</artifactId>
+		<version>1.0.0</version>
+		<relativePath>../clinic-root/pom.xml</relativePath>
+	</parent>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<maven.compiler.source>17</maven.compiler.source>
+		<maven.compiler.target>17</maven.compiler.target>
+
+		<server.uri>http://localhost:9090/api/</server.uri>
+	</properties>
+
+	<build>
+		<resources>
+			<resource>
+				<directory>src/main/resources</directory>
+				<filtering>true</filtering>
+			</resource>
+		</resources>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<configuration>
+					<descriptorRefs>
+						<descriptorRef>jar-with-dependencies</descriptorRef>
+					</descriptorRefs>
+					<archive>
+						<manifest>
+							<mainClass>edu.stevens.cs548.clinic.rest.client.App</mainClass>
+						</manifest>
+					</archive>
+				</configuration>
+				<executions>
+					<execution>
+						<phase>package</phase>
+						<goals>
+							<goal>single</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+
+			<!--			<plugin>-->
+			<!--				<groupId>org.apache.maven.plugins</groupId>-->
+			<!--				<artifactId>maven-shade-plugin</artifactId>-->
+			<!--			</plugin>-->
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-antrun-plugin</artifactId>
+				<executions>
+					<execution>
+						<phase>package</phase>
+						<goals>
+							<goal>run</goal>
+						</goals>
+						<configuration>
+							<target>
+								<delete file="${dist.dir}/clinic-rest-client.jar" />
+								<copy file="${project.build.directory}/${project.build.finalName}-jar-with-dependencies.jar" tofile="${dist.dir}/clinic-rest-client.jar" />
+							</target>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+
+
+	<dependencies>
+		<dependency>
+			<groupId>com.google.code.gson</groupId>
+			<artifactId>gson</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>com.squareup.retrofit2</groupId>
+			<artifactId>retrofit</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>com.squareup.retrofit2</groupId>
+			<artifactId>converter-gson</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>edu.stevens.cs548</groupId>
+			<artifactId>clinic-dto</artifactId>
+		</dependency>
+	</dependencies>
+
+
+</project>

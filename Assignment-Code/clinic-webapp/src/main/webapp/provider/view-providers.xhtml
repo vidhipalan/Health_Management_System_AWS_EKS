@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<!-- https://balusc.omnifaces.org/2021/11/whats-new-in-faces-40.html -->
+
+<html
+		xmlns:faces="jakarta.faces"
+		xmlns:ui="jakarta.faces.facelets"
+		xmlns:f="jakarta.faces.core"
+		xmlns:h="jakarta.faces.html"
+		xmlns:pt="jakarta.faces.passthrough"
+		xmlns:cc="jakarta.faces.composite"
+		xmlns:c="jakarta.tags.core"
+		xmlns:fn="jakarta.tags.functions">
+
+<ui:composition template="../WEB-INF/templates/template.xhtml">
+	<ui:define name="title">#{bundle['providers.title']}</ui:define>
+
+	<ui:define name="content">
+
+		<p align="center">
+			<h:outputText value="#{bundle['providers.header']}" />
+		</p>
+
+		<p align="center">
+			<h:dataTable id="providers" styleClass="gridTable"
+				summary="#{bundle['providers.summary']}"
+				value="#{providersBacking.providers}" var="provider">
+				<h:column>
+					<f:facet name="header">
+						<h:outputText value="#{bundle['providers.provider.name']}" />
+					</f:facet>
+					<h:link outcome="view-provider">
+						<f:param name="id" value="#{provider.id}" />
+						<h:outputText id="name" value="#{provider.name}" />
+					</h:link>
+				</h:column>
+
+				<h:column>
+					<f:facet name="header">
+						<h:outputText value="#{bundle['providers.provider.npi']}" />
+					</f:facet>
+					<h:outputText id="npi" value="#{provider.npi}" />
+				</h:column>
+
+
+				<f:facet name="caption">
+					<h:outputText value="#{bundle['providers.caption']}" />
+				</f:facet>
+			</h:dataTable>
+		</p>
+
+		<p align="center">
+			<h:messages globalOnly="true" style="color: red" />
+		</p>
+
+	</ui:define>
+</ui:composition>
+</html>

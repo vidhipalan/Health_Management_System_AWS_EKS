@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+
+<!-- https://balusc.omnifaces.org/2021/11/whats-new-in-faces-40.html -->
+
+<html
+		xmlns:faces="jakarta.faces"
+		xmlns:ui="jakarta.faces.facelets"
+		xmlns:f="jakarta.faces.core"
+		xmlns:h="jakarta.faces.html"
+		xmlns:pt="jakarta.faces.passthrough"
+		xmlns:cc="jakarta.faces.composite"
+		xmlns:c="jakarta.tags.core"
+		xmlns:fn="jakarta.tags.functions">
+
+<ui:composition template="../WEB-INF/templates/template.xhtml">
+	<ui:define name="title">#{bundle['patient.title']}</ui:define>
+
+	<ui:define name="content">
+		<f:metadata>
+			<!-- Query string parameter for patient id -->
+			<f:viewParam name="id" value="#{patientBacking.id}" />
+			<!-- Load the patient record from the database. -->
+			<f:viewAction action="#{patientBacking.load()}" />
+		</f:metadata>
+
+		<h2 align="center">
+			<h:outputText value="#{bundle['patient.header']}" />
+		</h2>
+
+		<p align="center">
+			<h:panelGrid columns="2">
+				<h:outputLabel for="patientId">
+        				#{bundle['patient.id']}:
+    				</h:outputLabel>
+				<h:outputText id="patientId" value="#{patientBacking.id}" />
+
+				<h:outputLabel for="patientName">
+        				#{bundle['patient.name']}:
+    				</h:outputLabel>
+				<h:outputText id="patientName" value="#{patientBacking.name}" />
+
+				<h:outputLabel for="patientDob">
+        				#{bundle['patient.dob']}:
+    				</h:outputLabel>
+				<h:outputText id="patientDob" value="#{patientBacking.dob}">
+					<f:convertDateTime type="localDate" pattern="yyyy-MM-dd" />
+				</h:outputText>
+			</h:panelGrid>
+		</p>
+
+		<p align="center">
+			<h:dataTable id="treatments"
+				summary="#{bundle['patient.treatment.caption']}"
+				styleClass="gridTable" value="#{patientBacking.treatments}"
+				var="treatment">
+				<h:column>
+					<f:facet name="header">
+						<h:outputText value="#{bundle['patient.treatment.type']}" />
+					</f:facet>
+					<h:link outcome="view-treatment">
+						<f:param name="id" value="#{treatment.id}" />
+						<f:param name="patientId" value="#{treatment.patientId}" />
+						<h:outputText id="treatment" size="20"
+							value="#{patientBacking.getTreatmentType(treatment)}" />
+					</h:link>
+					<h:message for="treatment" />
+				</h:column>
+				<h:column>
+					<f:facet name="header">
+						<h:outputText value="#{bundle['patient.treatment.diagnosis']}" />
+					</f:facet>
+					<h:outputText id="diagnosis" size="20"
+						value="#{treatment.diagnosis}" />
+					<h:message for="diagnosis" />
+				</h:column>
+				<h:column>
+					<f:facet name="header">
+						<h:outputText value="#{bundle['patient.treatment.provider']}" />
+					</f:facet>
+					<h:link outcome="view-provider">
+						<f:param name="id" value="#{treatment.providerId}" />
+						<h:outputText id="provider" size="20"
+							value="#{treatment.providerName}" />
+					</h:link>
+					<h:message for="provider" />
+				</h:column>
+				<f:facet name="caption">
+					<h:outputText value="#{bundle['patient.treatment.caption']}" />
+				</f:facet>
+			</h:dataTable>
+		</p>
+
+		<p align="center">
+			<h:messages globalOnly="true" style="color: red" />
+		</p>
+
+	</ui:define>
+</ui:composition>
+</html>

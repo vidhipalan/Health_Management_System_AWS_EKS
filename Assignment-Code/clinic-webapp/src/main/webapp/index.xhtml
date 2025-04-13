@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<!-- https://balusc.omnifaces.org/2021/11/whats-new-in-faces-40.html -->
+
+<html
+		xmlns:faces="jakarta.faces"
+		xmlns:ui="jakarta.faces.facelets"
+		xmlns:f="jakarta.faces.core"
+		xmlns:h="jakarta.faces.html"
+		xmlns:pt="jakarta.faces.passthrough"
+		xmlns:cc="jakarta.faces.composite"
+		xmlns:c="jakarta.tags.core"
+		xmlns:fn="jakarta.tags.functions">
+
+<ui:composition template="WEB-INF/templates/template.xhtml">
+	<ui:define name="title">
+	#{bundle['index.title']}
+	</ui:define>
+	<ui:define name="content">
+	
+		<h2>
+			<h:outputText id="name" value="#{bundle['index.header']}" />
+
+		</h2>
+		
+	</ui:define>
+
+</ui:composition>
+</html>

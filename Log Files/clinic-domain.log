@@ -1,0 +1,620 @@
+[2025-04-13T17:19:42.307+0000] [] [[1;92mINFO[0m] [] [[1;94mfish.payara.micro.cdi.extension.ClusteredCDIEventBusImpl[0m] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1744564782307] [levelValue: 800] Clustered CDI Event bus initialized
+
+[2025-04-13T17:19:42.323+0000] [] [[1;92mINFO[0m] [] [[1;94mfish.payara.microprofile.healthcheck.cdi.extension.HealthCDIExtension[0m] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1744564782323] [levelValue: 800] Registered edu.stevens.cs548.clinic.micro.domain.health.LivenessCheck as a HealthCheck for app: clinic-domain
+
+[2025-04-13T17:19:42.326+0000] [] [[1;92mINFO[0m] [] [[1;94mfish.payara.microprofile.healthcheck.cdi.extension.HealthCDIExtension[0m] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1744564782326] [levelValue: 800] Registered edu.stevens.cs548.clinic.micro.domain.health.ReadinessCheck as a HealthCheck for app: clinic-domain
+
+[2025-04-13T17:19:42.458+0000] [] [[1;92mINFO[0m] [] [[1;94mjavax.enterprise.system.core[0m] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1744564782458] [levelValue: 800] clinic-domain was successfully deployed in 10,549 milliseconds.
+
+[2025-04-13T17:19:42.460+0000] [] [[1;92mINFO[0m] [] [[1;94mPayaraMicro[0m] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1744564782460] [levelValue: 800] Deployed 1 archive(s)
+
+[2025-04-13T17:19:42.494+0000] [] [[1;92mINFO[0m] [AS-WEB-GLUE-00130] [[1;94mjakarta.enterprise.web[0m] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1744564782494] [levelValue: 800] Invalid Session Management Configuration for non-distributable app [clinic-domain] - defaulting to memory: persistence-type = [hazelcast] / persistenceFrequency = [web-method] / persistenceScope = [modified-session]
+
+[2025-04-13T17:19:42.538+0000] [] [[1;92mINFO[0m] [] [[1;94morg.eclipse.krazo.servlet.KrazoContainerInitializer[0m] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1744564782538] [levelValue: 800] Eclipse Krazo version 3.0.1 started
+
+[2025-04-13T17:19:42.543+0000] [] [[1;92mINFO[0m] [] [[1;94morg.glassfish.soteria.servlet.SamRegistrationInstaller[0m] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1744564782543] [levelValue: 800] Initializing Soteria 3.0.3.payara-p1 for context '/api'
+
+[2025-04-13T17:19:42.811+0000] [] [[1;92mINFO[0m] [AS-WEB-GLUE-00172] [[1;94mjakarta.enterprise.web[0m] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1744564782811] [levelValue: 800] Loading application [clinic-domain] at [/api]
+
+[2025-04-13T17:19:42.832+0000] [] [[1;92mINFO[0m] [] [[1;94mPayaraMicro[0m] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1744564782832] [levelValue: 800] [[
+  {
+    "Instance Configuration": {
+        "Host": "clinic-domain-6b88fc4b95-m5zlm",
+        "Http Port(s)": "8080",
+        "Https Port(s)": "",
+        "Instance Name": "Fragile-Dace",
+        "Instance Group": "MicroShoal",
+        "Hazelcast Member UUID": "eca3059e-5936-4b3e-8f2a-d7d6712ba3bf",
+        "Deployed": [
+            {
+                "Name": "clinic-domain",
+                "Type": "war",
+                "Context Root": "/api"
+            }
+        ]
+    }
+}]]
+
+[2025-04-13T17:19:42.838+0000] [] [[1;92mINFO[0m] [] [[1;94mPayaraMicro[0m] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1744564782838] [levelValue: 800] [[
+  
+Payara Micro URLs:
+http://clinic-domain-6b88fc4b95-m5zlm:8080/api
+
+'clinic-domain' REST Endpoints:
+GET	/api/application.wadl
+DELETE	/api/patient
+GET	/api/patient
+POST	/api/patient
+GET	/api/patient/{id}
+GET	/api/patient/{id}/treatment/{tid}
+DELETE	/api/provider
+GET	/api/provider
+POST	/api/provider
+GET	/api/provider/{id}
+POST	/api/provider/{id}/treatment
+GET	/api/provider/{id}/treatment/{tid}
+
+]]
+
+[2025-04-13T17:19:42.838+0000] [] [[1;92mINFO[0m] [] [[1;94mPayaraMicro[0m] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1744564782838] [levelValue: 800] Payara Micro 6.2025.1 #badassmicrofish (build 28) ready in 20,510 (ms)
+
+[2025-04-13T17:21:28.288+0000] [] [[1;92mINFO[0m] [] [[1;94medu.stevens.cs548.clinic.micro.domain.health.ReadinessCheck[0m] [tid: _ThreadID=73 _ThreadName=http-thread-pool::http-listener(1)] [timeMillis: 1744564888288] [levelValue: 800] Liveness check for database microservice succeeded!
+
+[2025-04-13T17:21:32.943+0000] [] [[1;92mINFO[0m] [] [[1;94medu.stevens.cs548.clinic.micro.domain.health.ReadinessCheck[0m] [tid: _ThreadID=74 _ThreadName=http-thread-pool::http-listener(2)] [timeMillis: 1744564892943] [levelValue: 800] Readiness check for database succeeded!
+
+[2025-04-13T17:26:01.208+0000] [] [[1;92mINFO[0m] [] [[1;94medu.stevens.cs548.clinic.micro.domain.rest.PatientMicroService[0m] [tid: _ThreadID=73 _ThreadName=http-thread-pool::http-listener(1)] [timeMillis: 1744565161208] [levelValue: 800] getPatient: Getting patient 2433c266-9167-4316-9b1e-16bc0fe9de16 in microservice!
+
+[2025-04-13T17:26:01.269+0000] [] [FINE[0m] [] [[1;94morg.eclipse.persistence.session./file:/tmp/payaramicro-rt6453845595956336981tmp/applications/clinic-domain/WEB-INF/lib/clinic-domain-1.0.0.jar_clinic-domain.sql[0m] [tid: _ThreadID=73 _ThreadName=http-thread-pool::http-listener(1)] [timeMillis: 1744565161269] [levelValue: 500] [[
+  SELECT ID, DOB, NAME, PATIENTID FROM PATIENT WHERE (PATIENTID = ?)
+	bind => [1 parameter bound]]]
+
+[2025-04-13T17:26:01.289+0000] [] [FINE[0m] [] [[1;94morg.eclipse.persistence.session./file:/tmp/payaramicro-rt6453845595956336981tmp/applications/clinic-domain/WEB-INF/lib/clinic-domain-1.0.0.jar_clinic-domain.sql[0m] [tid: _ThreadID=73 _ThreadName=http-thread-pool::http-listener(1)] [timeMillis: 1744565161289] [levelValue: 500] [[
+  SELECT ID, DOB, NAME, PATIENTID FROM PATIENT WHERE (ID = ?)
+	bind => [1 parameter bound]]]
+
+[2025-04-13T17:26:01.295+0000] [] [FINE[0m] [] [[1;94morg.eclipse.persistence.session./file:/tmp/payaramicro-rt6453845595956336981tmp/applications/clinic-domain/WEB-INF/lib/clinic-domain-1.0.0.jar_clinic-domain.sql[0m] [tid: _ThreadID=73 _ThreadName=http-thread-pool::http-listener(1)] [timeMillis: 1744565161295] [levelValue: 500] [[
+  SELECT DISTINCT DTYPE FROM TREATMENT WHERE (PATIENT_ID = ?)
+	bind => [1 parameter bound]]]
+
+[2025-04-13T17:26:01.299+0000] [] [FINE[0m] [] [[1;94morg.eclipse.persistence.session./file:/tmp/payaramicro-rt6453845595956336981tmp/applications/clinic-domain/WEB-INF/lib/clinic-domain-1.0.0.jar_clinic-domain.sql[0m] [tid: _ThreadID=73 _ThreadName=http-thread-pool::http-listener(1)] [timeMillis: 1744565161299] [levelValue: 500] [[
+  SELECT t0.ID, t0.DTYPE, t0.DIAGNOSIS, t0.TREATMENTID, t0.PATIENT_ID, t0.PROVIDER_ID, t1.ID, t1.DOSAGE, t1.DRUG, t1.ENDDATE, t1.FREQUENCY, t1.STARTDATE FROM TREATMENT t0, DRUGTREATMENT t1 WHERE ((t0.PATIENT_ID = ?) AND ((t1.ID = t0.ID) AND (t0.DTYPE = ?)))
+	bind => [2 parameters bound]]]
+
+[2025-04-13T17:26:01.304+0000] [] [FINE[0m] [] [[1;94morg.eclipse.persistence.session./file:/tmp/payaramicro-rt6453845595956336981tmp/applications/clinic-domain/WEB-INF/lib/clinic-domain-1.0.0.jar_clinic-domain.sql[0m] [tid: _ThreadID=73 _ThreadName=http-thread-pool::http-listener(1)] [timeMillis: 1744565161304] [levelValue: 500] [[
+  SELECT ID, NAME, NPI, PROVIDERID FROM PROVIDER WHERE (ID = ?)
+	bind => [1 parameter bound]]]
+
+[2025-04-13T17:26:21.028+0000] [] [[1;92mINFO[0m] [] [[1;94medu.stevens.cs548.clinic.micro.domain.rest.PatientMicroService[0m] [tid: _ThreadID=73 _ThreadName=http-thread-pool::http-listener(1)] [timeMillis: 1744565181028] [levelValue: 800] getPatient: Getting patient a3c0f6ea-d9ff-4eb6-9aa7-3869ac2d09c9 in microservice!
+
+[2025-04-13T17:26:21.031+0000] [] [FINE[0m] [] [[1;94morg.eclipse.persistence.session./file:/tmp/payaramicro-rt6453845595956336981tmp/applications/clinic-domain/WEB-INF/lib/clinic-domain-1.0.0.jar_clinic-domain.sql[0m] [tid: _ThreadID=73 _ThreadName=http-thread-pool::http-listener(1)] [timeMillis: 1744565181031] [levelValue: 500] [[
+  SELECT ID, DOB, NAME, PATIENTID FROM PATIENT WHERE (PATIENTID = ?)
+	bind => [1 parameter bound]]]
+
+[2025-04-13T17:26:21.035+0000] [] [FINE[0m] [] [[1;94morg.eclipse.persistence.session./file:/tmp/payaramicro-rt6453845595956336981tmp/applications/clinic-domain/WEB-INF/lib/clinic-domain-1.0.0.jar_clinic-domain.sql[0m] [tid: _ThreadID=73 _ThreadName=http-thread-pool::http-listener(1)] [timeMillis: 1744565181035] [levelValue: 500] [[
+  SELECT ID, DOB, NAME, PATIENTID FROM PATIENT WHERE (ID = ?)
+	bind => [1 parameter bound]]]
+
+[2025-04-13T17:26:21.041+0000] [] [FINE[0m] [] [[1;94morg.eclipse.persistence.session./file:/tmp/payaramicro-rt6453845595956336981tmp/applications/clinic-domain/WEB-INF/lib/clinic-domain-1.0.0.jar_clinic-domain.sql[0m] [tid: _ThreadID=73 _ThreadName=http-thread-pool::http-listener(1)] [timeMillis: 1744565181041] [levelValue: 500] [[
+  SELECT DISTINCT DTYPE FROM TREATMENT WHERE (PATIENT_ID = ?)
+	bind => [1 parameter bound]]]
+
+[2025-04-13T17:28:20.267+0000] [] [[1;92mINFO[0m] [] [[1;94medu.stevens.cs548.clinic.micro.domain.rest.ProviderMicroService[0m] [tid: _ThreadID=73 _ThreadName=http-thread-pool::http-listener(1)] [timeMillis: 1744565300267] [levelValue: 800] deleteProviders: Deleting all providers in microservice!
+
+[2025-04-13T17:28:20.284+0000] [] [FINE[0m] [] [[1;94morg.eclipse.persistence.session./file:/tmp/payaramicro-rt6453845595956336981tmp/applications/clinic-domain/WEB-INF/lib/clinic-domain-1.0.0.jar_clinic-domain.sql[0m] [tid: _ThreadID=73 _ThreadName=http-thread-pool::http-listener(1)] [timeMillis: 1744565300284] [levelValue: 500] [[
+  DELETE FROM PhysiotherapyTreatment_TREATMENTDATES WHERE EXISTS(SELECT t0.ID FROM TREATMENT t0, PHYSIOTHERAPYTREATMENT t1 WHERE ((t1.ID = t0.ID) AND (t0.DTYPE = ?)) AND t0.ID = PhysiotherapyTreatment_TREATMENTDATES.PhysiotherapyTreatment_ID)
+	bind => [1 parameter bound]]]
+
+[2025-04-13T17:28:20.293+0000] [] [FINE[0m] [] [[1;94morg.eclipse.persistence.session./file:/tmp/payaramicro-rt6453845595956336981tmp/applications/clinic-domain/WEB-INF/lib/clinic-domain-1.0.0.jar_clinic-domain.sql[0m] [tid: _ThreadID=73 _ThreadName=http-thread-pool::http-listener(1)] [timeMillis: 1744565300293] [levelValue: 500] DELETE FROM PHYSIOTHERAPYTREATMENT
+
+[2025-04-13T17:28:20.294+0000] [] [FINE[0m] [] [[1;94morg.eclipse.persistence.session./file:/tmp/payaramicro-rt6453845595956336981tmp/applications/clinic-domain/WEB-INF/lib/clinic-domain-1.0.0.jar_clinic-domain.sql[0m] [tid: _ThreadID=73 _ThreadName=http-thread-pool::http-listener(1)] [timeMillis: 1744565300294] [levelValue: 500] DELETE FROM DRUGTREATMENT
+
+[2025-04-13T17:28:20.295+0000] [] [FINE[0m] [] [[1;94morg.eclipse.persistence.session./file:/tmp/payaramicro-rt6453845595956336981tmp/applications/clinic-domain/WEB-INF/lib/clinic-domain-1.0.0.jar_clinic-domain.sql[0m] [tid: _ThreadID=73 _ThreadName=http-thread-pool::http-listener(1)] [timeMillis: 1744565300295] [levelValue: 500] [[
+  DELETE FROM RadiologyTreatment_TREATMENTDATES WHERE EXISTS(SELECT t0.ID FROM TREATMENT t0, RADIOLOGYTREATMENT t1 WHERE ((t1.ID = t0.ID) AND (t0.DTYPE = ?)) AND t0.ID = RadiologyTreatment_TREATMENTDATES.RadiologyTreatment_ID)
+	bind => [1 parameter bound]]]
+
+[2025-04-13T17:28:20.296+0000] [] [FINE[0m] [] [[1;94morg.eclipse.persistence.session./file:/tmp/payaramicro-rt6453845595956336981tmp/applications/clinic-domain/WEB-INF/lib/clinic-domain-1.0.0.jar_clinic-domain.sql[0m] [tid: _ThreadID=73 _ThreadName=http-thread-pool::http-listener(1)] [timeMillis: 1744565300296] [levelValue: 500] DELETE FROM RADIOLOGYTREATMENT
+
+[2025-04-13T17:28:20.297+0000] [] [FINE[0m] [] [[1;94morg.eclipse.persistence.session./file:/tmp/payaramicro-rt6453845595956336981tmp/applications/clinic-domain/WEB-INF/lib/clinic-domain-1.0.0.jar_clinic-domain.sql[0m] [tid: _ThreadID=73 _ThreadName=http-thread-pool::http-listener(1)] [timeMillis: 1744565300297] [levelValue: 500] DELETE FROM SURGERYTREATMENT
+
+[2025-04-13T17:28:20.298+0000] [] [FINE[0m] [] [[1;94morg.eclipse.persistence.session./file:/tmp/payaramicro-rt6453845595956336981tmp/applications/clinic-domain/WEB-INF/lib/clinic-domain-1.0.0.jar_clinic-domain.sql[0m] [tid: _ThreadID=73 _ThreadName=http-thread-pool::http-listener(1)] [timeMillis: 1744565300298] [levelValue: 500] DELETE FROM TREATMENT_TREATMENT
+
+[2025-04-13T17:28:20.299+0000] [] [FINE[0m] [] [[1;94morg.eclipse.persistence.session./file:/tmp/payaramicro-rt6453845595956336981tmp/applications/clinic-domain/WEB-INF/lib/clinic-domain-1.0.0.jar_clinic-domain.sql[0m] [tid: _ThreadID=73 _ThreadName=http-thread-pool::http-listener(1)] [timeMillis: 1744565300299] [levelValue: 500] DELETE FROM TREATMENT
+
+[2025-04-13T17:28:20.302+0000] [] [FINE[0m] [] [[1;94morg.eclipse.persistence.session./file:/tmp/payaramicro-rt6453845595956336981tmp/applications/clinic-domain/WEB-INF/lib/clinic-domain-1.0.0.jar_clinic-domain.sql[0m] [tid: _ThreadID=73 _ThreadName=http-thread-pool::http-listener(1)] [timeMillis: 1744565300302] [levelValue: 500] DELETE FROM PROVIDER
+
+[2025-04-13T17:28:20.693+0000] [] [[1;92mINFO[0m] [] [[1;94medu.stevens.cs548.clinic.micro.domain.rest.PatientMicroService[0m] [tid: _ThreadID=74 _ThreadName=http-thread-pool::http-listener(2)] [timeMillis: 1744565300693] [levelValue: 800] deletePatients: Deleting all patients in microservice!
+
+[2025-04-13T17:28:20.696+0000] [] [FINE[0m] [] [[1;94morg.eclipse.persistence.session./file:/tmp/payaramicro-rt6453845595956336981tmp/applications/clinic-domain/WEB-INF/lib/clinic-domain-1.0.0.jar_clinic-domain.sql[0m] [tid: _ThreadID=74 _ThreadName=http-thread-pool::http-listener(2)] [timeMillis: 1744565300696] [levelValue: 500] DELETE FROM PATIENT
+
+[2025-04-13T17:28:20.795+0000] [] [[1;92mINFO[0m] [] [[1;94medu.stevens.cs548.clinic.micro.domain.rest.PatientMicroService[0m] [tid: _ThreadID=73 _ThreadName=http-thread-pool::http-listener(1)] [timeMillis: 1744565300795] [levelValue: 800] addPatient: Adding patient John Doe in microservice!
+
+[2025-04-13T17:28:20.797+0000] [] [FINE[0m] [] [[1;94morg.eclipse.persistence.session./file:/tmp/payaramicro-rt6453845595956336981tmp/applications/clinic-domain/WEB-INF/lib/clinic-domain-1.0.0.jar_clinic-domain.sql[0m] [tid: _ThreadID=73 _ThreadName=http-thread-pool::http-listener(1)] [timeMillis: 1744565300797] [levelValue: 500] [[
+  SELECT COUNT(ID) FROM PATIENT WHERE (PATIENTID = ?)
+	bind => [1 parameter bound]]]
+
+[2025-04-13T17:28:20.801+0000] [] [[1;92mINFO[0m] [] [[1;94medu.stevens.cs548.clinic.domain.PatientDao[0m] [tid: _ThreadID=73 _ThreadName=http-thread-pool::http-listener(1)] [timeMillis: 1744565300801] [levelValue: 800] Adding patient with id c9d7e7ba-f6a5-47ec-8a49-fa692576f2fd, found 0 existing records
+
+[2025-04-13T17:28:20.803+0000] [] [FINE[0m] [] [[1;94morg.eclipse.persistence.session./file:/tmp/payaramicro-rt6453845595956336981tmp/applications/clinic-domain/WEB-INF/lib/clinic-domain-1.0.0.jar_clinic-domain.sql[0m] [tid: _ThreadID=73 _ThreadName=http-thread-pool::http-listener(1)] [timeMillis: 1744565300803] [levelValue: 500] [[
+  UPDATE SEQUENCE SET SEQ_COUNT = SEQ_COUNT + ? WHERE SEQ_NAME = ?
+	bind => [2 parameters bound]]]
+
+[2025-04-13T17:28:20.805+0000] [] [FINE[0m] [] [[1;94morg.eclipse.persistence.session./file:/tmp/payaramicro-rt6453845595956336981tmp/applications/clinic-domain/WEB-INF/lib/clinic-domain-1.0.0.jar_clinic-domain.sql[0m] [tid: _ThreadID=73 _ThreadName=http-thread-pool::http-listener(1)] [timeMillis: 1744565300805] [levelValue: 500] [[
+  SELECT SEQ_COUNT FROM SEQUENCE WHERE SEQ_NAME = ?
+	bind => [1 parameter bound]]]
+
+[2025-04-13T17:28:20.819+0000] [] [FINE[0m] [] [[1;94morg.eclipse.persistence.session./file:/tmp/payaramicro-rt6453845595956336981tmp/applications/clinic-domain/WEB-INF/lib/clinic-domain-1.0.0.jar_clinic-domain.sql[0m] [tid: _ThreadID=73 _ThreadName=http-thread-pool::http-listener(1)] [timeMillis: 1744565300819] [levelValue: 500] [[
+  INSERT INTO PATIENT (ID, DOB, NAME, PATIENTID) VALUES (?, ?, ?, ?)
+	bind => [4 parameters bound]]]
+
+[2025-04-13T17:28:20.836+0000] [] [[1;92mINFO[0m] [] [[1;94medu.stevens.cs548.clinic.micro.domain.rest.ProviderMicroService[0m] [tid: _ThreadID=74 _ThreadName=http-thread-pool::http-listener(2)] [timeMillis: 1744565300836] [levelValue: 800] addProvider: Adding provider Jane Doe in microservice!
+
+[2025-04-13T17:28:20.844+0000] [] [FINE[0m] [] [[1;94morg.eclipse.persistence.session./file:/tmp/payaramicro-rt6453845595956336981tmp/applications/clinic-domain/WEB-INF/lib/clinic-domain-1.0.0.jar_clinic-domain.sql[0m] [tid: _ThreadID=74 _ThreadName=http-thread-pool::http-listener(2)] [timeMillis: 1744565300844] [levelValue: 500] [[
+  SELECT COUNT(ID) FROM PROVIDER WHERE (PROVIDERID = ?)
+	bind => [1 parameter bound]]]
+
+[2025-04-13T17:28:20.846+0000] [] [[1;92mINFO[0m] [] [[1;94medu.stevens.cs548.clinic.domain.ProviderDao[0m] [tid: _ThreadID=74 _ThreadName=http-thread-pool::http-listener(2)] [timeMillis: 1744565300846] [levelValue: 800] Adding provider with id a8a21e1a-fcd4-409d-ac1c-2c26e00262bc, found 0 existing records
+
+[2025-04-13T17:28:20.862+0000] [] [FINE[0m] [] [[1;94morg.eclipse.persistence.session./file:/tmp/payaramicro-rt6453845595956336981tmp/applications/clinic-domain/WEB-INF/lib/clinic-domain-1.0.0.jar_clinic-domain.sql[0m] [tid: _ThreadID=74 _ThreadName=http-thread-pool::http-listener(2)] [timeMillis: 1744565300862] [levelValue: 500] [[
+  INSERT INTO PROVIDER (ID, NAME, NPI, PROVIDERID) VALUES (?, ?, ?, ?)
+	bind => [4 parameters bound]]]
+
+[2025-04-13T17:28:20.904+0000] [] [[1;92mINFO[0m] [] [[1;94medu.stevens.cs548.clinic.micro.domain.rest.ProviderMicroService[0m] [tid: _ThreadID=73 _ThreadName=http-thread-pool::http-listener(1)] [timeMillis: 1744565300904] [levelValue: 800] addTreatment: Adding treatment for John Doe in microservice!
+
+[2025-04-13T17:28:20.906+0000] [] [FINE[0m] [] [[1;94morg.eclipse.persistence.session./file:/tmp/payaramicro-rt6453845595956336981tmp/applications/clinic-domain/WEB-INF/lib/clinic-domain-1.0.0.jar_clinic-domain.sql[0m] [tid: _ThreadID=73 _ThreadName=http-thread-pool::http-listener(1)] [timeMillis: 1744565300906] [levelValue: 500] [[
+  SELECT ID, NAME, NPI, PROVIDERID FROM PROVIDER WHERE (PROVIDERID = ?)
+	bind => [1 parameter bound]]]
+
+[2025-04-13T17:28:20.908+0000] [] [FINE[0m] [] [[1;94morg.eclipse.persistence.session./file:/tmp/payaramicro-rt6453845595956336981tmp/applications/clinic-domain/WEB-INF/lib/clinic-domain-1.0.0.jar_clinic-domain.sql[0m] [tid: _ThreadID=73 _ThreadName=http-thread-pool::http-listener(1)] [timeMillis: 1744565300908] [levelValue: 500] [[
+  SELECT ID, NAME, NPI, PROVIDERID FROM PROVIDER WHERE (ID = ?)
+	bind => [1 parameter bound]]]
+
+[2025-04-13T17:28:20.911+0000] [] [FINE[0m] [] [[1;94morg.eclipse.persistence.session./file:/tmp/payaramicro-rt6453845595956336981tmp/applications/clinic-domain/WEB-INF/lib/clinic-domain-1.0.0.jar_clinic-domain.sql[0m] [tid: _ThreadID=73 _ThreadName=http-thread-pool::http-listener(1)] [timeMillis: 1744565300911] [levelValue: 500] [[
+  SELECT ID, DOB, NAME, PATIENTID FROM PATIENT WHERE (PATIENTID = ?)
+	bind => [1 parameter bound]]]
+
+[2025-04-13T17:28:20.915+0000] [] [FINE[0m] [] [[1;94morg.eclipse.persistence.session./file:/tmp/payaramicro-rt6453845595956336981tmp/applications/clinic-domain/WEB-INF/lib/clinic-domain-1.0.0.jar_clinic-domain.sql[0m] [tid: _ThreadID=73 _ThreadName=http-thread-pool::http-listener(1)] [timeMillis: 1744565300915] [levelValue: 500] [[
+  SELECT ID, DOB, NAME, PATIENTID FROM PATIENT WHERE (ID = ?)
+	bind => [1 parameter bound]]]
+
+[2025-04-13T17:28:20.937+0000] [] [FINE[0m] [] [[1;94morg.eclipse.persistence.session./file:/tmp/payaramicro-rt6453845595956336981tmp/applications/clinic-domain/WEB-INF/lib/clinic-domain-1.0.0.jar_clinic-domain.sql[0m] [tid: _ThreadID=73 _ThreadName=http-thread-pool::http-listener(1)] [timeMillis: 1744565300937] [levelValue: 500] [[
+  INSERT INTO TREATMENT (ID, DIAGNOSIS, TREATMENTID, PATIENT_ID, PROVIDER_ID, DTYPE) VALUES (?, ?, ?, ?, ?, ?)
+	bind => [6 parameters bound]]]
+
+[2025-04-13T17:28:20.940+0000] [] [FINE[0m] [] [[1;94morg.eclipse.persistence.session./file:/tmp/payaramicro-rt6453845595956336981tmp/applications/clinic-domain/WEB-INF/lib/clinic-domain-1.0.0.jar_clinic-domain.sql[0m] [tid: _ThreadID=73 _ThreadName=http-thread-pool::http-listener(1)] [timeMillis: 1744565300940] [levelValue: 500] [[
+  INSERT INTO DRUGTREATMENT (DOSAGE, DRUG, ENDDATE, FREQUENCY, STARTDATE, ID) VALUES (?, ?, ?, ?, ?, ?)
+	bind => [6 parameters bound]]]
+
+[2025-04-13T17:28:20.957+0000] [] [[1;92mINFO[0m] [] [[1;94medu.stevens.cs548.clinic.micro.domain.rest.PatientMicroService[0m] [tid: _ThreadID=74 _ThreadName=http-thread-pool::http-listener(2)] [timeMillis: 1744565300957] [levelValue: 800] getPatients: Getting all patients in microservice!
+
+[2025-04-13T17:28:20.959+0000] [] [FINE[0m] [] [[1;94morg.eclipse.persistence.session./file:/tmp/payaramicro-rt6453845595956336981tmp/applications/clinic-domain/WEB-INF/lib/clinic-domain-1.0.0.jar_clinic-domain.sql[0m] [tid: _ThreadID=74 _ThreadName=http-thread-pool::http-listener(2)] [timeMillis: 1744565300959] [levelValue: 500] SELECT ID, DOB, NAME, PATIENTID FROM PATIENT
+
+[2025-04-13T17:28:20.996+0000] [] [[1;92mINFO[0m] [] [[1;94medu.stevens.cs548.clinic.micro.domain.rest.ProviderMicroService[0m] [tid: _ThreadID=73 _ThreadName=http-thread-pool::http-listener(1)] [timeMillis: 1744565300996] [levelValue: 800] getProviders: Getting all providers in microservice!
+
+[2025-04-13T17:28:21.000+0000] [] [FINE[0m] [] [[1;94morg.eclipse.persistence.session./file:/tmp/payaramicro-rt6453845595956336981tmp/applications/clinic-domain/WEB-INF/lib/clinic-domain-1.0.0.jar_clinic-domain.sql[0m] [tid: _ThreadID=73 _ThreadName=http-thread-pool::http-listener(1)] [timeMillis: 1744565301000] [levelValue: 500] SELECT ID, NAME, NPI, PROVIDERID FROM PROVIDER
+
+[2025-04-13T17:30:41.460+0000] [] [[1;92mINFO[0m] [] [[1;94medu.stevens.cs548.clinic.micro.domain.health.ReadinessCheck[0m] [tid: _ThreadID=73 _ThreadName=http-thread-pool::http-listener(1)] [timeMillis: 1744565441460] [levelValue: 800] Liveness check for database microservice succeeded!
+
+[2025-04-13T17:30:51.555+0000] [] [[1;92mINFO[0m] [] [[1;94medu.stevens.cs548.clinic.micro.domain.rest.PatientMicroService[0m] [tid: _ThreadID=74 _ThreadName=http-thread-pool::http-listener(2)] [timeMillis: 1744565451555] [levelValue: 800] getPatients: Getting all patients in microservice!
+
+[2025-04-13T17:30:51.562+0000] [] [FINE[0m] [] [[1;94morg.eclipse.persistence.session./file:/tmp/payaramicro-rt6453845595956336981tmp/applications/clinic-domain/WEB-INF/lib/clinic-domain-1.0.0.jar_clinic-domain.sql[0m] [tid: _ThreadID=74 _ThreadName=http-thread-pool::http-listener(2)] [timeMillis: 1744565451562] [levelValue: 500] SELECT ID, DOB, NAME, PATIENTID FROM PATIENT
+
+[2025-04-13T17:30:53.737+0000] [] [[1;92mINFO[0m] [] [[1;94medu.stevens.cs548.clinic.micro.domain.rest.PatientMicroService[0m] [tid: _ThreadID=73 _ThreadName=http-thread-pool::http-listener(1)] [timeMillis: 1744565453737] [levelValue: 800] getPatients: Getting all patients in microservice!
+
+[2025-04-13T17:30:53.739+0000] [] [FINE[0m] [] [[1;94morg.eclipse.persistence.session./file:/tmp/payaramicro-rt6453845595956336981tmp/applications/clinic-domain/WEB-INF/lib/clinic-domain-1.0.0.jar_clinic-domain.sql[0m] [tid: _ThreadID=73 _ThreadName=http-thread-pool::http-listener(1)] [timeMillis: 1744565453739] [levelValue: 500] SELECT ID, DOB, NAME, PATIENTID FROM PATIENT
+
+[2025-04-13T17:30:56.034+0000] [] [[1;92mINFO[0m] [] [[1;94medu.stevens.cs548.clinic.micro.domain.rest.ProviderMicroService[0m] [tid: _ThreadID=74 _ThreadName=http-thread-pool::http-listener(2)] [timeMillis: 1744565456034] [levelValue: 800] getProviders: Getting all providers in microservice!
+
+[2025-04-13T17:30:56.036+0000] [] [FINE[0m] [] [[1;94morg.eclipse.persistence.session./file:/tmp/payaramicro-rt6453845595956336981tmp/applications/clinic-domain/WEB-INF/lib/clinic-domain-1.0.0.jar_clinic-domain.sql[0m] [tid: _ThreadID=74 _ThreadName=http-thread-pool::http-listener(2)] [timeMillis: 1744565456036] [levelValue: 500] SELECT ID, NAME, NPI, PROVIDERID FROM PROVIDER
+
+[2025-04-13T17:30:57.752+0000] [] [[1;92mINFO[0m] [] [[1;94medu.stevens.cs548.clinic.micro.domain.rest.PatientMicroService[0m] [tid: _ThreadID=73 _ThreadName=http-thread-pool::http-listener(1)] [timeMillis: 1744565457752] [levelValue: 800] getPatients: Getting all patients in microservice!
+
+[2025-04-13T17:30:57.754+0000] [] [FINE[0m] [] [[1;94morg.eclipse.persistence.session./file:/tmp/payaramicro-rt6453845595956336981tmp/applications/clinic-domain/WEB-INF/lib/clinic-domain-1.0.0.jar_clinic-domain.sql[0m] [tid: _ThreadID=73 _ThreadName=http-thread-pool::http-listener(1)] [timeMillis: 1744565457754] [levelValue: 500] SELECT ID, DOB, NAME, PATIENTID FROM PATIENT
+
+[2025-04-13T17:31:23.637+0000] [] [[1;92mINFO[0m] [] [[1;94medu.stevens.cs548.clinic.micro.domain.rest.PatientMicroService[0m] [tid: _ThreadID=73 _ThreadName=http-thread-pool::http-listener(1)] [timeMillis: 1744565483637] [levelValue: 800] getPatients: Getting all patients in microservice!
+
+[2025-04-13T17:31:23.641+0000] [] [FINE[0m] [] [[1;94morg.eclipse.persistence.session./file:/tmp/payaramicro-rt6453845595956336981tmp/applications/clinic-domain/WEB-INF/lib/clinic-domain-1.0.0.jar_clinic-domain.sql[0m] [tid: _ThreadID=73 _ThreadName=http-thread-pool::http-listener(1)] [timeMillis: 1744565483641] [levelValue: 500] SELECT ID, DOB, NAME, PATIENTID FROM PATIENT
+
+[2025-04-13T17:31:42.008+0000] [] [[1;92mINFO[0m] [] [[1;94medu.stevens.cs548.clinic.micro.domain.rest.PatientMicroService[0m] [tid: _ThreadID=73 _ThreadName=http-thread-pool::http-listener(1)] [timeMillis: 1744565502008] [levelValue: 800] getPatients: Getting all patients in microservice!
+
+[2025-04-13T17:31:42.010+0000] [] [FINE[0m] [] [[1;94morg.eclipse.persistence.session./file:/tmp/payaramicro-rt6453845595956336981tmp/applications/clinic-domain/WEB-INF/lib/clinic-domain-1.0.0.jar_clinic-domain.sql[0m] [tid: _ThreadID=73 _ThreadName=http-thread-pool::http-listener(1)] [timeMillis: 1744565502010] [levelValue: 500] SELECT ID, DOB, NAME, PATIENTID FROM PATIENT
+
+[2025-04-13T17:31:44.734+0000] [] [[1;92mINFO[0m] [] [[1;94medu.stevens.cs548.clinic.micro.domain.rest.PatientMicroService[0m] [tid: _ThreadID=74 _ThreadName=http-thread-pool::http-listener(2)] [timeMillis: 1744565504734] [levelValue: 800] getPatients: Getting all patients in microservice!
+
+[2025-04-13T17:31:44.745+0000] [] [FINE[0m] [] [[1;94morg.eclipse.persistence.session./file:/tmp/payaramicro-rt6453845595956336981tmp/applications/clinic-domain/WEB-INF/lib/clinic-domain-1.0.0.jar_clinic-domain.sql[0m] [tid: _ThreadID=74 _ThreadName=http-thread-pool::http-listener(2)] [timeMillis: 1744565504745] [levelValue: 500] SELECT ID, DOB, NAME, PATIENTID FROM PATIENT
+
+[2025-04-13T17:31:45.425+0000] [] [[1;92mINFO[0m] [] [[1;94medu.stevens.cs548.clinic.micro.domain.rest.PatientMicroService[0m] [tid: _ThreadID=73 _ThreadName=http-thread-pool::http-listener(1)] [timeMillis: 1744565505425] [levelValue: 800] getPatients: Getting all patients in microservice!
+
+[2025-04-13T17:31:45.430+0000] [] [FINE[0m] [] [[1;94morg.eclipse.persistence.session./file:/tmp/payaramicro-rt6453845595956336981tmp/applications/clinic-domain/WEB-INF/lib/clinic-domain-1.0.0.jar_clinic-domain.sql[0m] [tid: _ThreadID=73 _ThreadName=http-thread-pool::http-listener(1)] [timeMillis: 1744565505430] [levelValue: 500] SELECT ID, DOB, NAME, PATIENTID FROM PATIENT
+
+[2025-04-13T17:31:47.360+0000] [] [[1;92mINFO[0m] [] [[1;94medu.stevens.cs548.clinic.micro.domain.rest.ProviderMicroService[0m] [tid: _ThreadID=74 _ThreadName=http-thread-pool::http-listener(2)] [timeMillis: 1744565507360] [levelValue: 800] getProviders: Getting all providers in microservice!
+
+[2025-04-13T17:31:47.363+0000] [] [FINE[0m] [] [[1;94morg.eclipse.persistence.session./file:/tmp/payaramicro-rt6453845595956336981tmp/applications/clinic-domain/WEB-INF/lib/clinic-domain-1.0.0.jar_clinic-domain.sql[0m] [tid: _ThreadID=74 _ThreadName=http-thread-pool::http-listener(2)] [timeMillis: 1744565507363] [levelValue: 500] SELECT ID, NAME, NPI, PROVIDERID FROM PROVIDER
+
+[2025-04-13T17:31:49.186+0000] [] [[1;92mINFO[0m] [] [[1;94medu.stevens.cs548.clinic.micro.domain.rest.ProviderMicroService[0m] [tid: _ThreadID=73 _ThreadName=http-thread-pool::http-listener(1)] [timeMillis: 1744565509186] [levelValue: 800] getProviders: Getting all providers in microservice!
+
+[2025-04-13T17:31:49.190+0000] [] [FINE[0m] [] [[1;94morg.eclipse.persistence.session./file:/tmp/payaramicro-rt6453845595956336981tmp/applications/clinic-domain/WEB-INF/lib/clinic-domain-1.0.0.jar_clinic-domain.sql[0m] [tid: _ThreadID=73 _ThreadName=http-thread-pool::http-listener(1)] [timeMillis: 1744565509190] [levelValue: 500] SELECT ID, NAME, NPI, PROVIDERID FROM PROVIDER
+
+[2025-04-13T17:31:49.894+0000] [] [[1;92mINFO[0m] [] [[1;94medu.stevens.cs548.clinic.micro.domain.rest.PatientMicroService[0m] [tid: _ThreadID=74 _ThreadName=http-thread-pool::http-listener(2)] [timeMillis: 1744565509894] [levelValue: 800] getPatients: Getting all patients in microservice!
+
+[2025-04-13T17:31:49.896+0000] [] [FINE[0m] [] [[1;94morg.eclipse.persistence.session./file:/tmp/payaramicro-rt6453845595956336981tmp/applications/clinic-domain/WEB-INF/lib/clinic-domain-1.0.0.jar_clinic-domain.sql[0m] [tid: _ThreadID=74 _ThreadName=http-thread-pool::http-listener(2)] [timeMillis: 1744565509896] [levelValue: 500] SELECT ID, DOB, NAME, PATIENTID FROM PATIENT
+
+[2025-04-13T17:33:49.155+0000] [] [[1;92mINFO[0m] [] [[1;94medu.stevens.cs548.clinic.micro.domain.rest.ProviderMicroService[0m] [tid: _ThreadID=74 _ThreadName=http-thread-pool::http-listener(2)] [timeMillis: 1744565629155] [levelValue: 800] getProviders: Getting all providers in microservice!
+
+[2025-04-13T17:33:49.156+0000] [] [FINE[0m] [] [[1;94morg.eclipse.persistence.session./file:/tmp/payaramicro-rt6453845595956336981tmp/applications/clinic-domain/WEB-INF/lib/clinic-domain-1.0.0.jar_clinic-domain.sql[0m] [tid: _ThreadID=74 _ThreadName=http-thread-pool::http-listener(2)] [timeMillis: 1744565629156] [levelValue: 500] SELECT ID, NAME, NPI, PROVIDERID FROM PROVIDER
+
+[2025-04-13T17:33:50.488+0000] [] [[1;92mINFO[0m] [] [[1;94medu.stevens.cs548.clinic.micro.domain.rest.PatientMicroService[0m] [tid: _ThreadID=73 _ThreadName=http-thread-pool::http-listener(1)] [timeMillis: 1744565630488] [levelValue: 800] getPatients: Getting all patients in microservice!
+
+[2025-04-13T17:33:50.490+0000] [] [FINE[0m] [] [[1;94morg.eclipse.persistence.session./file:/tmp/payaramicro-rt6453845595956336981tmp/applications/clinic-domain/WEB-INF/lib/clinic-domain-1.0.0.jar_clinic-domain.sql[0m] [tid: _ThreadID=73 _ThreadName=http-thread-pool::http-listener(1)] [timeMillis: 1744565630490] [levelValue: 500] SELECT ID, DOB, NAME, PATIENTID FROM PATIENT
+
+[2025-04-13T17:33:54.628+0000] [] [[1;92mINFO[0m] [] [[1;94medu.stevens.cs548.clinic.micro.domain.rest.PatientMicroService[0m] [tid: _ThreadID=74 _ThreadName=http-thread-pool::http-listener(2)] [timeMillis: 1744565634628] [levelValue: 800] getPatients: Getting all patients in microservice!
+
+[2025-04-13T17:33:54.630+0000] [] [FINE[0m] [] [[1;94morg.eclipse.persistence.session./file:/tmp/payaramicro-rt6453845595956336981tmp/applications/clinic-domain/WEB-INF/lib/clinic-domain-1.0.0.jar_clinic-domain.sql[0m] [tid: _ThreadID=74 _ThreadName=http-thread-pool::http-listener(2)] [timeMillis: 1744565634630] [levelValue: 500] SELECT ID, DOB, NAME, PATIENTID FROM PATIENT
+
+[2025-04-13T17:34:05.457+0000] [] [[1;92mINFO[0m] [] [[1;94medu.stevens.cs548.clinic.micro.domain.rest.PatientMicroService[0m] [tid: _ThreadID=74 _ThreadName=http-thread-pool::http-listener(2)] [timeMillis: 1744565645457] [levelValue: 800] getPatients: Getting all patients in microservice!
+
+[2025-04-13T17:34:05.462+0000] [] [FINE[0m] [] [[1;94morg.eclipse.persistence.session./file:/tmp/payaramicro-rt6453845595956336981tmp/applications/clinic-domain/WEB-INF/lib/clinic-domain-1.0.0.jar_clinic-domain.sql[0m] [tid: _ThreadID=74 _ThreadName=http-thread-pool::http-listener(2)] [timeMillis: 1744565645462] [levelValue: 500] SELECT ID, DOB, NAME, PATIENTID FROM PATIENT
+
+[2025-04-13T17:34:06.516+0000] [] [[1;92mINFO[0m] [] [[1;94medu.stevens.cs548.clinic.micro.domain.rest.ProviderMicroService[0m] [tid: _ThreadID=73 _ThreadName=http-thread-pool::http-listener(1)] [timeMillis: 1744565646516] [levelValue: 800] getProviders: Getting all providers in microservice!
+
+[2025-04-13T17:34:06.525+0000] [] [FINE[0m] [] [[1;94morg.eclipse.persistence.session./file:/tmp/payaramicro-rt6453845595956336981tmp/applications/clinic-domain/WEB-INF/lib/clinic-domain-1.0.0.jar_clinic-domain.sql[0m] [tid: _ThreadID=73 _ThreadName=http-thread-pool::http-listener(1)] [timeMillis: 1744565646525] [levelValue: 500] SELECT ID, NAME, NPI, PROVIDERID FROM PROVIDER
+
+[2025-04-13T17:34:09.998+0000] [] [[1;92mINFO[0m] [] [[1;94medu.stevens.cs548.clinic.micro.domain.rest.PatientMicroService[0m] [tid: _ThreadID=74 _ThreadName=http-thread-pool::http-listener(2)] [timeMillis: 1744565649998] [levelValue: 800] getPatients: Getting all patients in microservice!
+
+[2025-04-13T17:34:10.005+0000] [] [FINE[0m] [] [[1;94morg.eclipse.persistence.session./file:/tmp/payaramicro-rt6453845595956336981tmp/applications/clinic-domain/WEB-INF/lib/clinic-domain-1.0.0.jar_clinic-domain.sql[0m] [tid: _ThreadID=74 _ThreadName=http-thread-pool::http-listener(2)] [timeMillis: 1744565650005] [levelValue: 500] SELECT ID, DOB, NAME, PATIENTID FROM PATIENT
+
+[2025-04-13T17:34:10.932+0000] [] [[1;92mINFO[0m] [] [[1;94medu.stevens.cs548.clinic.micro.domain.rest.ProviderMicroService[0m] [tid: _ThreadID=73 _ThreadName=http-thread-pool::http-listener(1)] [timeMillis: 1744565650932] [levelValue: 800] getProviders: Getting all providers in microservice!
+
+[2025-04-13T17:34:10.934+0000] [] [FINE[0m] [] [[1;94morg.eclipse.persistence.session./file:/tmp/payaramicro-rt6453845595956336981tmp/applications/clinic-domain/WEB-INF/lib/clinic-domain-1.0.0.jar_clinic-domain.sql[0m] [tid: _ThreadID=73 _ThreadName=http-thread-pool::http-listener(1)] [timeMillis: 1744565650934] [levelValue: 500] SELECT ID, NAME, NPI, PROVIDERID FROM PROVIDER
+
+[2025-04-13T17:36:36.019+0000] [] [[1;92mINFO[0m] [] [[1;94medu.stevens.cs548.clinic.micro.domain.rest.ProviderMicroService[0m] [tid: _ThreadID=73 _ThreadName=http-thread-pool::http-listener(1)] [timeMillis: 1744565796019] [levelValue: 800] getProviders: Getting all providers in microservice!
+
+[2025-04-13T17:36:36.021+0000] [] [FINE[0m] [] [[1;94morg.eclipse.persistence.session./file:/tmp/payaramicro-rt6453845595956336981tmp/applications/clinic-domain/WEB-INF/lib/clinic-domain-1.0.0.jar_clinic-domain.sql[0m] [tid: _ThreadID=73 _ThreadName=http-thread-pool::http-listener(1)] [timeMillis: 1744565796021] [levelValue: 500] SELECT ID, NAME, NPI, PROVIDERID FROM PROVIDER
+
+[2025-04-13T17:36:38.470+0000] [] [[1;92mINFO[0m] [] [[1;94medu.stevens.cs548.clinic.micro.domain.rest.PatientMicroService[0m] [tid: _ThreadID=74 _ThreadName=http-thread-pool::http-listener(2)] [timeMillis: 1744565798470] [levelValue: 800] getPatients: Getting all patients in microservice!
+
+[2025-04-13T17:36:38.472+0000] [] [FINE[0m] [] [[1;94morg.eclipse.persistence.session./file:/tmp/payaramicro-rt6453845595956336981tmp/applications/clinic-domain/WEB-INF/lib/clinic-domain-1.0.0.jar_clinic-domain.sql[0m] [tid: _ThreadID=74 _ThreadName=http-thread-pool::http-listener(2)] [timeMillis: 1744565798472] [levelValue: 500] SELECT ID, DOB, NAME, PATIENTID FROM PATIENT
+
+[2025-04-13T17:36:39.153+0000] [] [[1;92mINFO[0m] [] [[1;94medu.stevens.cs548.clinic.micro.domain.rest.PatientMicroService[0m] [tid: _ThreadID=73 _ThreadName=http-thread-pool::http-listener(1)] [timeMillis: 1744565799153] [levelValue: 800] getPatients: Getting all patients in microservice!
+
+[2025-04-13T17:36:39.155+0000] [] [FINE[0m] [] [[1;94morg.eclipse.persistence.session./file:/tmp/payaramicro-rt6453845595956336981tmp/applications/clinic-domain/WEB-INF/lib/clinic-domain-1.0.0.jar_clinic-domain.sql[0m] [tid: _ThreadID=73 _ThreadName=http-thread-pool::http-listener(1)] [timeMillis: 1744565799155] [levelValue: 500] SELECT ID, DOB, NAME, PATIENTID FROM PATIENT
+
+[2025-04-13T17:36:39.766+0000] [] [[1;92mINFO[0m] [] [[1;94medu.stevens.cs548.clinic.micro.domain.rest.PatientMicroService[0m] [tid: _ThreadID=74 _ThreadName=http-thread-pool::http-listener(2)] [timeMillis: 1744565799766] [levelValue: 800] getPatient: Getting patient 0a225159-c76a-47ff-8642-b0d5873080ad in microservice!
+
+[2025-04-13T17:36:39.772+0000] [] [FINE[0m] [] [[1;94morg.eclipse.persistence.session./file:/tmp/payaramicro-rt6453845595956336981tmp/applications/clinic-domain/WEB-INF/lib/clinic-domain-1.0.0.jar_clinic-domain.sql[0m] [tid: _ThreadID=74 _ThreadName=http-thread-pool::http-listener(2)] [timeMillis: 1744565799772] [levelValue: 500] [[
+  SELECT ID, DOB, NAME, PATIENTID FROM PATIENT WHERE (PATIENTID = ?)
+	bind => [1 parameter bound]]]
+
+[2025-04-13T17:36:39.775+0000] [] [FINE[0m] [] [[1;94morg.eclipse.persistence.session./file:/tmp/payaramicro-rt6453845595956336981tmp/applications/clinic-domain/WEB-INF/lib/clinic-domain-1.0.0.jar_clinic-domain.sql[0m] [tid: _ThreadID=74 _ThreadName=http-thread-pool::http-listener(2)] [timeMillis: 1744565799775] [levelValue: 500] [[
+  SELECT ID, DOB, NAME, PATIENTID FROM PATIENT WHERE (ID = ?)
+	bind => [1 parameter bound]]]
+
+[2025-04-13T17:36:39.777+0000] [] [FINE[0m] [] [[1;94morg.eclipse.persistence.session./file:/tmp/payaramicro-rt6453845595956336981tmp/applications/clinic-domain/WEB-INF/lib/clinic-domain-1.0.0.jar_clinic-domain.sql[0m] [tid: _ThreadID=74 _ThreadName=http-thread-pool::http-listener(2)] [timeMillis: 1744565799777] [levelValue: 500] [[
+  SELECT DISTINCT DTYPE FROM TREATMENT WHERE (PATIENT_ID = ?)
+	bind => [1 parameter bound]]]
+
+[2025-04-13T17:36:39.788+0000] [] [FINE[0m] [] [[1;94morg.eclipse.persistence.session./file:/tmp/payaramicro-rt6453845595956336981tmp/applications/clinic-domain/WEB-INF/lib/clinic-domain-1.0.0.jar_clinic-domain.sql[0m] [tid: _ThreadID=74 _ThreadName=http-thread-pool::http-listener(2)] [timeMillis: 1744565799788] [levelValue: 500] [[
+  SELECT t0.ID, t0.DTYPE, t0.DIAGNOSIS, t0.TREATMENTID, t0.PATIENT_ID, t0.PROVIDER_ID, t1.ID, t1.DOSAGE, t1.DRUG, t1.ENDDATE, t1.FREQUENCY, t1.STARTDATE FROM TREATMENT t0, DRUGTREATMENT t1 WHERE ((t0.PATIENT_ID = ?) AND ((t1.ID = t0.ID) AND (t0.DTYPE = ?)))
+	bind => [2 parameters bound]]]
+
+[2025-04-13T17:36:39.793+0000] [] [FINE[0m] [] [[1;94morg.eclipse.persistence.session./file:/tmp/payaramicro-rt6453845595956336981tmp/applications/clinic-domain/WEB-INF/lib/clinic-domain-1.0.0.jar_clinic-domain.sql[0m] [tid: _ThreadID=74 _ThreadName=http-thread-pool::http-listener(2)] [timeMillis: 1744565799793] [levelValue: 500] [[
+  SELECT t0.ID, t0.DTYPE, t0.DIAGNOSIS, t0.TREATMENTID, t0.PATIENT_ID, t0.PROVIDER_ID, t1.ID FROM TREATMENT t0, PHYSIOTHERAPYTREATMENT t1 WHERE ((t0.PATIENT_ID = ?) AND ((t1.ID = t0.ID) AND (t0.DTYPE = ?)))
+	bind => [2 parameters bound]]]
+
+[2025-04-13T17:36:39.799+0000] [] [FINE[0m] [] [[1;94morg.eclipse.persistence.session./file:/tmp/payaramicro-rt6453845595956336981tmp/applications/clinic-domain/WEB-INF/lib/clinic-domain-1.0.0.jar_clinic-domain.sql[0m] [tid: _ThreadID=74 _ThreadName=http-thread-pool::http-listener(2)] [timeMillis: 1744565799799] [levelValue: 500] [[
+  SELECT t0.ID, t0.DTYPE, t0.DIAGNOSIS, t0.TREATMENTID, t0.PATIENT_ID, t0.PROVIDER_ID, t1.ID FROM TREATMENT t0, RADIOLOGYTREATMENT t1 WHERE ((t0.PATIENT_ID = ?) AND ((t1.ID = t0.ID) AND (t0.DTYPE = ?)))
+	bind => [2 parameters bound]]]
+
+[2025-04-13T17:36:39.805+0000] [] [FINE[0m] [] [[1;94morg.eclipse.persistence.session./file:/tmp/payaramicro-rt6453845595956336981tmp/applications/clinic-domain/WEB-INF/lib/clinic-domain-1.0.0.jar_clinic-domain.sql[0m] [tid: _ThreadID=74 _ThreadName=http-thread-pool::http-listener(2)] [timeMillis: 1744565799805] [levelValue: 500] [[
+  SELECT t0.ID, t0.DTYPE, t0.DIAGNOSIS, t0.TREATMENTID, t0.PATIENT_ID, t0.PROVIDER_ID, t1.ID, t1.DISCHARGEINSTRUCTIONS, t1.SURGERYDATE FROM TREATMENT t0, SURGERYTREATMENT t1 WHERE ((t0.PATIENT_ID = ?) AND ((t1.ID = t0.ID) AND (t0.DTYPE = ?)))
+	bind => [2 parameters bound]]]
+
+[2025-04-13T17:36:39.815+0000] [] [FINE[0m] [] [[1;94morg.eclipse.persistence.session./file:/tmp/payaramicro-rt6453845595956336981tmp/applications/clinic-domain/WEB-INF/lib/clinic-domain-1.0.0.jar_clinic-domain.sql[0m] [tid: _ThreadID=74 _ThreadName=http-thread-pool::http-listener(2)] [timeMillis: 1744565799815] [levelValue: 500] [[
+  SELECT t0.TREATMENTDATES FROM PhysiotherapyTreatment_TREATMENTDATES t0 WHERE (t0.PhysiotherapyTreatment_ID = ?) ORDER BY t0.TREATMENTDATES ASC
+	bind => [1 parameter bound]]]
+
+[2025-04-13T17:36:39.821+0000] [] [FINE[0m] [] [[1;94morg.eclipse.persistence.session./file:/tmp/payaramicro-rt6453845595956336981tmp/applications/clinic-domain/WEB-INF/lib/clinic-domain-1.0.0.jar_clinic-domain.sql[0m] [tid: _ThreadID=74 _ThreadName=http-thread-pool::http-listener(2)] [timeMillis: 1744565799821] [levelValue: 500] [[
+  SELECT t0.TREATMENTDATES FROM RadiologyTreatment_TREATMENTDATES t0 WHERE (t0.RadiologyTreatment_ID = ?) ORDER BY t0.TREATMENTDATES ASC
+	bind => [1 parameter bound]]]
+
+[2025-04-13T17:36:44.490+0000] [] [[1;92mINFO[0m] [] [[1;94medu.stevens.cs548.clinic.micro.domain.rest.ProviderMicroService[0m] [tid: _ThreadID=73 _ThreadName=http-thread-pool::http-listener(1)] [timeMillis: 1744565804490] [levelValue: 800] getProviders: Getting all providers in microservice!
+
+[2025-04-13T17:36:44.494+0000] [] [FINE[0m] [] [[1;94morg.eclipse.persistence.session./file:/tmp/payaramicro-rt6453845595956336981tmp/applications/clinic-domain/WEB-INF/lib/clinic-domain-1.0.0.jar_clinic-domain.sql[0m] [tid: _ThreadID=73 _ThreadName=http-thread-pool::http-listener(1)] [timeMillis: 1744565804494] [levelValue: 500] SELECT ID, NAME, NPI, PROVIDERID FROM PROVIDER
+
+[2025-04-13T17:36:45.862+0000] [] [[1;92mINFO[0m] [] [[1;94medu.stevens.cs548.clinic.micro.domain.rest.PatientMicroService[0m] [tid: _ThreadID=74 _ThreadName=http-thread-pool::http-listener(2)] [timeMillis: 1744565805862] [levelValue: 800] getPatients: Getting all patients in microservice!
+
+[2025-04-13T17:36:45.866+0000] [] [FINE[0m] [] [[1;94morg.eclipse.persistence.session./file:/tmp/payaramicro-rt6453845595956336981tmp/applications/clinic-domain/WEB-INF/lib/clinic-domain-1.0.0.jar_clinic-domain.sql[0m] [tid: _ThreadID=74 _ThreadName=http-thread-pool::http-listener(2)] [timeMillis: 1744565805866] [levelValue: 500] SELECT ID, DOB, NAME, PATIENTID FROM PATIENT
+
+[2025-04-13T17:36:47.289+0000] [] [[1;92mINFO[0m] [] [[1;94medu.stevens.cs548.clinic.micro.domain.rest.PatientMicroService[0m] [tid: _ThreadID=73 _ThreadName=http-thread-pool::http-listener(1)] [timeMillis: 1744565807289] [levelValue: 800] getPatient: Getting patient 0a225159-c76a-47ff-8642-b0d5873080ad in microservice!
+
+[2025-04-13T17:36:47.291+0000] [] [FINE[0m] [] [[1;94morg.eclipse.persistence.session./file:/tmp/payaramicro-rt6453845595956336981tmp/applications/clinic-domain/WEB-INF/lib/clinic-domain-1.0.0.jar_clinic-domain.sql[0m] [tid: _ThreadID=73 _ThreadName=http-thread-pool::http-listener(1)] [timeMillis: 1744565807291] [levelValue: 500] [[
+  SELECT ID, DOB, NAME, PATIENTID FROM PATIENT WHERE (PATIENTID = ?)
+	bind => [1 parameter bound]]]
+
+[2025-04-13T17:36:47.295+0000] [] [FINE[0m] [] [[1;94morg.eclipse.persistence.session./file:/tmp/payaramicro-rt6453845595956336981tmp/applications/clinic-domain/WEB-INF/lib/clinic-domain-1.0.0.jar_clinic-domain.sql[0m] [tid: _ThreadID=73 _ThreadName=http-thread-pool::http-listener(1)] [timeMillis: 1744565807295] [levelValue: 500] [[
+  SELECT ID, DOB, NAME, PATIENTID FROM PATIENT WHERE (ID = ?)
+	bind => [1 parameter bound]]]
+
+[2025-04-13T17:36:47.298+0000] [] [FINE[0m] [] [[1;94morg.eclipse.persistence.session./file:/tmp/payaramicro-rt6453845595956336981tmp/applications/clinic-domain/WEB-INF/lib/clinic-domain-1.0.0.jar_clinic-domain.sql[0m] [tid: _ThreadID=73 _ThreadName=http-thread-pool::http-listener(1)] [timeMillis: 1744565807298] [levelValue: 500] [[
+  SELECT DISTINCT DTYPE FROM TREATMENT WHERE (PATIENT_ID = ?)
+	bind => [1 parameter bound]]]
+
+[2025-04-13T17:36:47.299+0000] [] [FINE[0m] [] [[1;94morg.eclipse.persistence.session./file:/tmp/payaramicro-rt6453845595956336981tmp/applications/clinic-domain/WEB-INF/lib/clinic-domain-1.0.0.jar_clinic-domain.sql[0m] [tid: _ThreadID=73 _ThreadName=http-thread-pool::http-listener(1)] [timeMillis: 1744565807299] [levelValue: 500] [[
+  SELECT t0.ID, t0.DTYPE, t0.DIAGNOSIS, t0.TREATMENTID, t0.PATIENT_ID, t0.PROVIDER_ID, t1.ID, t1.DOSAGE, t1.DRUG, t1.ENDDATE, t1.FREQUENCY, t1.STARTDATE FROM TREATMENT t0, DRUGTREATMENT t1 WHERE ((t0.PATIENT_ID = ?) AND ((t1.ID = t0.ID) AND (t0.DTYPE = ?)))
+	bind => [2 parameters bound]]]
+
+[2025-04-13T17:36:47.307+0000] [] [FINE[0m] [] [[1;94morg.eclipse.persistence.session./file:/tmp/payaramicro-rt6453845595956336981tmp/applications/clinic-domain/WEB-INF/lib/clinic-domain-1.0.0.jar_clinic-domain.sql[0m] [tid: _ThreadID=73 _ThreadName=http-thread-pool::http-listener(1)] [timeMillis: 1744565807307] [levelValue: 500] [[
+  SELECT t0.ID, t0.DTYPE, t0.DIAGNOSIS, t0.TREATMENTID, t0.PATIENT_ID, t0.PROVIDER_ID, t1.ID FROM TREATMENT t0, PHYSIOTHERAPYTREATMENT t1 WHERE ((t0.PATIENT_ID = ?) AND ((t1.ID = t0.ID) AND (t0.DTYPE = ?)))
+	bind => [2 parameters bound]]]
+
+[2025-04-13T17:36:47.309+0000] [] [FINE[0m] [] [[1;94morg.eclipse.persistence.session./file:/tmp/payaramicro-rt6453845595956336981tmp/applications/clinic-domain/WEB-INF/lib/clinic-domain-1.0.0.jar_clinic-domain.sql[0m] [tid: _ThreadID=73 _ThreadName=http-thread-pool::http-listener(1)] [timeMillis: 1744565807309] [levelValue: 500] [[
+  SELECT t0.ID, t0.DTYPE, t0.DIAGNOSIS, t0.TREATMENTID, t0.PATIENT_ID, t0.PROVIDER_ID, t1.ID FROM TREATMENT t0, RADIOLOGYTREATMENT t1 WHERE ((t0.PATIENT_ID = ?) AND ((t1.ID = t0.ID) AND (t0.DTYPE = ?)))
+	bind => [2 parameters bound]]]
+
+[2025-04-13T17:36:47.312+0000] [] [FINE[0m] [] [[1;94morg.eclipse.persistence.session./file:/tmp/payaramicro-rt6453845595956336981tmp/applications/clinic-domain/WEB-INF/lib/clinic-domain-1.0.0.jar_clinic-domain.sql[0m] [tid: _ThreadID=73 _ThreadName=http-thread-pool::http-listener(1)] [timeMillis: 1744565807312] [levelValue: 500] [[
+  SELECT t0.ID, t0.DTYPE, t0.DIAGNOSIS, t0.TREATMENTID, t0.PATIENT_ID, t0.PROVIDER_ID, t1.ID, t1.DISCHARGEINSTRUCTIONS, t1.SURGERYDATE FROM TREATMENT t0, SURGERYTREATMENT t1 WHERE ((t0.PATIENT_ID = ?) AND ((t1.ID = t0.ID) AND (t0.DTYPE = ?)))
+	bind => [2 parameters bound]]]
+
+[2025-04-13T17:36:48.417+0000] [] [[1;92mINFO[0m] [] [[1;94medu.stevens.cs548.clinic.micro.domain.rest.PatientMicroService[0m] [tid: _ThreadID=74 _ThreadName=http-thread-pool::http-listener(2)] [timeMillis: 1744565808417] [levelValue: 800] getTreatment: Getting treatment 8b03949a-c42a-45c1-ac9e-45a6b73af007 in microservice!
+
+[2025-04-13T17:36:48.419+0000] [] [FINE[0m] [] [[1;94morg.eclipse.persistence.session./file:/tmp/payaramicro-rt6453845595956336981tmp/applications/clinic-domain/WEB-INF/lib/clinic-domain-1.0.0.jar_clinic-domain.sql[0m] [tid: _ThreadID=74 _ThreadName=http-thread-pool::http-listener(2)] [timeMillis: 1744565808419] [levelValue: 500] [[
+  SELECT ID, DOB, NAME, PATIENTID FROM PATIENT WHERE (PATIENTID = ?)
+	bind => [1 parameter bound]]]
+
+[2025-04-13T17:36:48.422+0000] [] [FINE[0m] [] [[1;94morg.eclipse.persistence.session./file:/tmp/payaramicro-rt6453845595956336981tmp/applications/clinic-domain/WEB-INF/lib/clinic-domain-1.0.0.jar_clinic-domain.sql[0m] [tid: _ThreadID=74 _ThreadName=http-thread-pool::http-listener(2)] [timeMillis: 1744565808422] [levelValue: 500] [[
+  SELECT ID, DOB, NAME, PATIENTID FROM PATIENT WHERE (ID = ?)
+	bind => [1 parameter bound]]]
+
+[2025-04-13T17:36:48.428+0000] [] [FINE[0m] [] [[1;94morg.eclipse.persistence.session./file:/tmp/payaramicro-rt6453845595956336981tmp/applications/clinic-domain/WEB-INF/lib/clinic-domain-1.0.0.jar_clinic-domain.sql[0m] [tid: _ThreadID=74 _ThreadName=http-thread-pool::http-listener(2)] [timeMillis: 1744565808428] [levelValue: 500] [[
+  SELECT DISTINCT DTYPE FROM TREATMENT WHERE (TREATMENTID = ?)
+	bind => [1 parameter bound]]]
+
+[2025-04-13T17:36:48.432+0000] [] [FINE[0m] [] [[1;94morg.eclipse.persistence.session./file:/tmp/payaramicro-rt6453845595956336981tmp/applications/clinic-domain/WEB-INF/lib/clinic-domain-1.0.0.jar_clinic-domain.sql[0m] [tid: _ThreadID=74 _ThreadName=http-thread-pool::http-listener(2)] [timeMillis: 1744565808432] [levelValue: 500] [[
+  SELECT t0.ID, t0.DTYPE, t0.DIAGNOSIS, t0.TREATMENTID, t0.PATIENT_ID, t0.PROVIDER_ID, t1.ID, t1.DOSAGE, t1.DRUG, t1.ENDDATE, t1.FREQUENCY, t1.STARTDATE FROM TREATMENT t0, DRUGTREATMENT t1 WHERE ((t0.TREATMENTID = ?) AND ((t1.ID = t0.ID) AND (t0.DTYPE = ?)))
+	bind => [2 parameters bound]]]
+
+[2025-04-13T17:36:48.439+0000] [] [FINE[0m] [] [[1;94morg.eclipse.persistence.session./file:/tmp/payaramicro-rt6453845595956336981tmp/applications/clinic-domain/WEB-INF/lib/clinic-domain-1.0.0.jar_clinic-domain.sql[0m] [tid: _ThreadID=74 _ThreadName=http-thread-pool::http-listener(2)] [timeMillis: 1744565808439] [levelValue: 500] [[
+  SELECT t0.ID, t0.DTYPE, t0.DIAGNOSIS, t0.TREATMENTID, t0.PATIENT_ID, t0.PROVIDER_ID, t1.ID, t1.DOSAGE, t1.DRUG, t1.ENDDATE, t1.FREQUENCY, t1.STARTDATE FROM TREATMENT t0, DRUGTREATMENT t1 WHERE ((t0.ID = ?) AND ((t1.ID = t0.ID) AND (t0.DTYPE = ?)))
+	bind => [2 parameters bound]]]
+
+[2025-04-13T17:36:48.448+0000] [] [FINE[0m] [] [[1;94morg.eclipse.persistence.session./file:/tmp/payaramicro-rt6453845595956336981tmp/applications/clinic-domain/WEB-INF/lib/clinic-domain-1.0.0.jar_clinic-domain.sql[0m] [tid: _ThreadID=74 _ThreadName=http-thread-pool::http-listener(2)] [timeMillis: 1744565808448] [levelValue: 500] [[
+  SELECT DISTINCT t1.DTYPE FROM TREATMENT_TREATMENT t0, TREATMENT t1 WHERE ((t0.Treatment_ID = ?) AND (t1.ID = t0.followupTreatments_ID))
+	bind => [1 parameter bound]]]
+
+[2025-04-13T17:36:48.454+0000] [] [FINE[0m] [] [[1;94morg.eclipse.persistence.session./file:/tmp/payaramicro-rt6453845595956336981tmp/applications/clinic-domain/WEB-INF/lib/clinic-domain-1.0.0.jar_clinic-domain.sql[0m] [tid: _ThreadID=74 _ThreadName=http-thread-pool::http-listener(2)] [timeMillis: 1744565808454] [levelValue: 500] [[
+  SELECT t0.ID, t0.DTYPE, t0.DIAGNOSIS, t0.TREATMENTID, t0.PATIENT_ID, t0.PROVIDER_ID, t1.ID, t1.DISCHARGEINSTRUCTIONS, t1.SURGERYDATE FROM TREATMENT t0, TREATMENT_TREATMENT t2, SURGERYTREATMENT t1 WHERE (((t2.Treatment_ID = ?) AND (t0.ID = t2.followupTreatments_ID)) AND ((t1.ID = t0.ID) AND (t0.DTYPE = ?)))
+	bind => [2 parameters bound]]]
+
+[2025-04-13T17:36:48.458+0000] [] [FINE[0m] [] [[1;94morg.eclipse.persistence.session./file:/tmp/payaramicro-rt6453845595956336981tmp/applications/clinic-domain/WEB-INF/lib/clinic-domain-1.0.0.jar_clinic-domain.sql[0m] [tid: _ThreadID=74 _ThreadName=http-thread-pool::http-listener(2)] [timeMillis: 1744565808458] [levelValue: 500] [[
+  SELECT DISTINCT t1.DTYPE FROM TREATMENT_TREATMENT t0, TREATMENT t1 WHERE ((t0.Treatment_ID = ?) AND (t1.ID = t0.followupTreatments_ID))
+	bind => [1 parameter bound]]]
+
+[2025-04-13T17:36:48.462+0000] [] [FINE[0m] [] [[1;94morg.eclipse.persistence.session./file:/tmp/payaramicro-rt6453845595956336981tmp/applications/clinic-domain/WEB-INF/lib/clinic-domain-1.0.0.jar_clinic-domain.sql[0m] [tid: _ThreadID=74 _ThreadName=http-thread-pool::http-listener(2)] [timeMillis: 1744565808462] [levelValue: 500] [[
+  SELECT t0.ID, t0.DTYPE, t0.DIAGNOSIS, t0.TREATMENTID, t0.PATIENT_ID, t0.PROVIDER_ID, t1.ID FROM TREATMENT t0, TREATMENT_TREATMENT t2, RADIOLOGYTREATMENT t1 WHERE (((t2.Treatment_ID = ?) AND (t0.ID = t2.followupTreatments_ID)) AND ((t1.ID = t0.ID) AND (t0.DTYPE = ?)))
+	bind => [2 parameters bound]]]
+
+[2025-04-13T17:36:48.471+0000] [] [FINE[0m] [] [[1;94morg.eclipse.persistence.session./file:/tmp/payaramicro-rt6453845595956336981tmp/applications/clinic-domain/WEB-INF/lib/clinic-domain-1.0.0.jar_clinic-domain.sql[0m] [tid: _ThreadID=74 _ThreadName=http-thread-pool::http-listener(2)] [timeMillis: 1744565808471] [levelValue: 500] [[
+  SELECT DISTINCT t1.DTYPE FROM TREATMENT_TREATMENT t0, TREATMENT t1 WHERE ((t0.Treatment_ID = ?) AND (t1.ID = t0.followupTreatments_ID))
+	bind => [1 parameter bound]]]
+
+[2025-04-13T17:36:48.476+0000] [] [FINE[0m] [] [[1;94morg.eclipse.persistence.session./file:/tmp/payaramicro-rt6453845595956336981tmp/applications/clinic-domain/WEB-INF/lib/clinic-domain-1.0.0.jar_clinic-domain.sql[0m] [tid: _ThreadID=74 _ThreadName=http-thread-pool::http-listener(2)] [timeMillis: 1744565808476] [levelValue: 500] [[
+  SELECT t0.ID, t0.DTYPE, t0.DIAGNOSIS, t0.TREATMENTID, t0.PATIENT_ID, t0.PROVIDER_ID, t1.ID FROM TREATMENT t0, TREATMENT_TREATMENT t2, PHYSIOTHERAPYTREATMENT t1 WHERE (((t2.Treatment_ID = ?) AND (t0.ID = t2.followupTreatments_ID)) AND ((t1.ID = t0.ID) AND (t0.DTYPE = ?)))
+	bind => [2 parameters bound]]]
+
+[2025-04-13T17:36:48.482+0000] [] [FINE[0m] [] [[1;94morg.eclipse.persistence.session./file:/tmp/payaramicro-rt6453845595956336981tmp/applications/clinic-domain/WEB-INF/lib/clinic-domain-1.0.0.jar_clinic-domain.sql[0m] [tid: _ThreadID=74 _ThreadName=http-thread-pool::http-listener(2)] [timeMillis: 1744565808482] [levelValue: 500] [[
+  SELECT DISTINCT t1.DTYPE FROM TREATMENT_TREATMENT t0, TREATMENT t1 WHERE ((t0.Treatment_ID = ?) AND (t1.ID = t0.followupTreatments_ID))
+	bind => [1 parameter bound]]]
+
+[2025-04-13T17:36:51.369+0000] [] [[1;92mINFO[0m] [] [[1;94medu.stevens.cs548.clinic.micro.domain.rest.PatientMicroService[0m] [tid: _ThreadID=73 _ThreadName=http-thread-pool::http-listener(1)] [timeMillis: 1744565811369] [levelValue: 800] getPatient: Getting patient 0a225159-c76a-47ff-8642-b0d5873080ad in microservice!
+
+[2025-04-13T17:36:51.371+0000] [] [FINE[0m] [] [[1;94morg.eclipse.persistence.session./file:/tmp/payaramicro-rt6453845595956336981tmp/applications/clinic-domain/WEB-INF/lib/clinic-domain-1.0.0.jar_clinic-domain.sql[0m] [tid: _ThreadID=73 _ThreadName=http-thread-pool::http-listener(1)] [timeMillis: 1744565811371] [levelValue: 500] [[
+  SELECT ID, DOB, NAME, PATIENTID FROM PATIENT WHERE (PATIENTID = ?)
+	bind => [1 parameter bound]]]
+
+[2025-04-13T17:36:51.380+0000] [] [FINE[0m] [] [[1;94morg.eclipse.persistence.session./file:/tmp/payaramicro-rt6453845595956336981tmp/applications/clinic-domain/WEB-INF/lib/clinic-domain-1.0.0.jar_clinic-domain.sql[0m] [tid: _ThreadID=73 _ThreadName=http-thread-pool::http-listener(1)] [timeMillis: 1744565811380] [levelValue: 500] [[
+  SELECT ID, DOB, NAME, PATIENTID FROM PATIENT WHERE (ID = ?)
+	bind => [1 parameter bound]]]
+
+[2025-04-13T17:36:51.385+0000] [] [FINE[0m] [] [[1;94morg.eclipse.persistence.session./file:/tmp/payaramicro-rt6453845595956336981tmp/applications/clinic-domain/WEB-INF/lib/clinic-domain-1.0.0.jar_clinic-domain.sql[0m] [tid: _ThreadID=73 _ThreadName=http-thread-pool::http-listener(1)] [timeMillis: 1744565811385] [levelValue: 500] [[
+  SELECT DISTINCT DTYPE FROM TREATMENT WHERE (PATIENT_ID = ?)
+	bind => [1 parameter bound]]]
+
+[2025-04-13T17:36:51.386+0000] [] [FINE[0m] [] [[1;94morg.eclipse.persistence.session./file:/tmp/payaramicro-rt6453845595956336981tmp/applications/clinic-domain/WEB-INF/lib/clinic-domain-1.0.0.jar_clinic-domain.sql[0m] [tid: _ThreadID=73 _ThreadName=http-thread-pool::http-listener(1)] [timeMillis: 1744565811386] [levelValue: 500] [[
+  SELECT t0.ID, t0.DTYPE, t0.DIAGNOSIS, t0.TREATMENTID, t0.PATIENT_ID, t0.PROVIDER_ID, t1.ID, t1.DOSAGE, t1.DRUG, t1.ENDDATE, t1.FREQUENCY, t1.STARTDATE FROM TREATMENT t0, DRUGTREATMENT t1 WHERE ((t0.PATIENT_ID = ?) AND ((t1.ID = t0.ID) AND (t0.DTYPE = ?)))
+	bind => [2 parameters bound]]]
+
+[2025-04-13T17:36:51.388+0000] [] [FINE[0m] [] [[1;94morg.eclipse.persistence.session./file:/tmp/payaramicro-rt6453845595956336981tmp/applications/clinic-domain/WEB-INF/lib/clinic-domain-1.0.0.jar_clinic-domain.sql[0m] [tid: _ThreadID=73 _ThreadName=http-thread-pool::http-listener(1)] [timeMillis: 1744565811388] [levelValue: 500] [[
+  SELECT t0.ID, t0.DTYPE, t0.DIAGNOSIS, t0.TREATMENTID, t0.PATIENT_ID, t0.PROVIDER_ID, t1.ID FROM TREATMENT t0, PHYSIOTHERAPYTREATMENT t1 WHERE ((t0.PATIENT_ID = ?) AND ((t1.ID = t0.ID) AND (t0.DTYPE = ?)))
+	bind => [2 parameters bound]]]
+
+[2025-04-13T17:36:51.389+0000] [] [FINE[0m] [] [[1;94morg.eclipse.persistence.session./file:/tmp/payaramicro-rt6453845595956336981tmp/applications/clinic-domain/WEB-INF/lib/clinic-domain-1.0.0.jar_clinic-domain.sql[0m] [tid: _ThreadID=73 _ThreadName=http-thread-pool::http-listener(1)] [timeMillis: 1744565811389] [levelValue: 500] [[
+  SELECT t0.ID, t0.DTYPE, t0.DIAGNOSIS, t0.TREATMENTID, t0.PATIENT_ID, t0.PROVIDER_ID, t1.ID FROM TREATMENT t0, RADIOLOGYTREATMENT t1 WHERE ((t0.PATIENT_ID = ?) AND ((t1.ID = t0.ID) AND (t0.DTYPE = ?)))
+	bind => [2 parameters bound]]]
+
+[2025-04-13T17:36:51.390+0000] [] [FINE[0m] [] [[1;94morg.eclipse.persistence.session./file:/tmp/payaramicro-rt6453845595956336981tmp/applications/clinic-domain/WEB-INF/lib/clinic-domain-1.0.0.jar_clinic-domain.sql[0m] [tid: _ThreadID=73 _ThreadName=http-thread-pool::http-listener(1)] [timeMillis: 1744565811390] [levelValue: 500] [[
+  SELECT t0.ID, t0.DTYPE, t0.DIAGNOSIS, t0.TREATMENTID, t0.PATIENT_ID, t0.PROVIDER_ID, t1.ID, t1.DISCHARGEINSTRUCTIONS, t1.SURGERYDATE FROM TREATMENT t0, SURGERYTREATMENT t1 WHERE ((t0.PATIENT_ID = ?) AND ((t1.ID = t0.ID) AND (t0.DTYPE = ?)))
+	bind => [2 parameters bound]]]
+
+[2025-04-13T17:36:54.720+0000] [] [[1;92mINFO[0m] [] [[1;94medu.stevens.cs548.clinic.micro.domain.rest.PatientMicroService[0m] [tid: _ThreadID=74 _ThreadName=http-thread-pool::http-listener(2)] [timeMillis: 1744565814720] [levelValue: 800] getPatient: Getting patient 0a225159-c76a-47ff-8642-b0d5873080ad in microservice!
+
+[2025-04-13T17:36:54.724+0000] [] [FINE[0m] [] [[1;94morg.eclipse.persistence.session./file:/tmp/payaramicro-rt6453845595956336981tmp/applications/clinic-domain/WEB-INF/lib/clinic-domain-1.0.0.jar_clinic-domain.sql[0m] [tid: _ThreadID=74 _ThreadName=http-thread-pool::http-listener(2)] [timeMillis: 1744565814724] [levelValue: 500] [[
+  SELECT ID, DOB, NAME, PATIENTID FROM PATIENT WHERE (PATIENTID = ?)
+	bind => [1 parameter bound]]]
+
+[2025-04-13T17:36:54.732+0000] [] [FINE[0m] [] [[1;94morg.eclipse.persistence.session./file:/tmp/payaramicro-rt6453845595956336981tmp/applications/clinic-domain/WEB-INF/lib/clinic-domain-1.0.0.jar_clinic-domain.sql[0m] [tid: _ThreadID=74 _ThreadName=http-thread-pool::http-listener(2)] [timeMillis: 1744565814732] [levelValue: 500] [[
+  SELECT ID, DOB, NAME, PATIENTID FROM PATIENT WHERE (ID = ?)
+	bind => [1 parameter bound]]]
+
+[2025-04-13T17:36:54.736+0000] [] [FINE[0m] [] [[1;94morg.eclipse.persistence.session./file:/tmp/payaramicro-rt6453845595956336981tmp/applications/clinic-domain/WEB-INF/lib/clinic-domain-1.0.0.jar_clinic-domain.sql[0m] [tid: _ThreadID=74 _ThreadName=http-thread-pool::http-listener(2)] [timeMillis: 1744565814736] [levelValue: 500] [[
+  SELECT DISTINCT DTYPE FROM TREATMENT WHERE (PATIENT_ID = ?)
+	bind => [1 parameter bound]]]
+
+[2025-04-13T17:36:54.740+0000] [] [FINE[0m] [] [[1;94morg.eclipse.persistence.session./file:/tmp/payaramicro-rt6453845595956336981tmp/applications/clinic-domain/WEB-INF/lib/clinic-domain-1.0.0.jar_clinic-domain.sql[0m] [tid: _ThreadID=74 _ThreadName=http-thread-pool::http-listener(2)] [timeMillis: 1744565814740] [levelValue: 500] [[
+  SELECT t0.ID, t0.DTYPE, t0.DIAGNOSIS, t0.TREATMENTID, t0.PATIENT_ID, t0.PROVIDER_ID, t1.ID, t1.DOSAGE, t1.DRUG, t1.ENDDATE, t1.FREQUENCY, t1.STARTDATE FROM TREATMENT t0, DRUGTREATMENT t1 WHERE ((t0.PATIENT_ID = ?) AND ((t1.ID = t0.ID) AND (t0.DTYPE = ?)))
+	bind => [2 parameters bound]]]
+
+[2025-04-13T17:36:54.742+0000] [] [FINE[0m] [] [[1;94morg.eclipse.persistence.session./file:/tmp/payaramicro-rt6453845595956336981tmp/applications/clinic-domain/WEB-INF/lib/clinic-domain-1.0.0.jar_clinic-domain.sql[0m] [tid: _ThreadID=74 _ThreadName=http-thread-pool::http-listener(2)] [timeMillis: 1744565814742] [levelValue: 500] [[
+  SELECT t0.ID, t0.DTYPE, t0.DIAGNOSIS, t0.TREATMENTID, t0.PATIENT_ID, t0.PROVIDER_ID, t1.ID FROM TREATMENT t0, PHYSIOTHERAPYTREATMENT t1 WHERE ((t0.PATIENT_ID = ?) AND ((t1.ID = t0.ID) AND (t0.DTYPE = ?)))
+	bind => [2 parameters bound]]]
+
+[2025-04-13T17:36:54.745+0000] [] [FINE[0m] [] [[1;94morg.eclipse.persistence.session./file:/tmp/payaramicro-rt6453845595956336981tmp/applications/clinic-domain/WEB-INF/lib/clinic-domain-1.0.0.jar_clinic-domain.sql[0m] [tid: _ThreadID=74 _ThreadName=http-thread-pool::http-listener(2)] [timeMillis: 1744565814745] [levelValue: 500] [[
+  SELECT t0.ID, t0.DTYPE, t0.DIAGNOSIS, t0.TREATMENTID, t0.PATIENT_ID, t0.PROVIDER_ID, t1.ID FROM TREATMENT t0, RADIOLOGYTREATMENT t1 WHERE ((t0.PATIENT_ID = ?) AND ((t1.ID = t0.ID) AND (t0.DTYPE = ?)))
+	bind => [2 parameters bound]]]
+
+[2025-04-13T17:36:54.748+0000] [] [FINE[0m] [] [[1;94morg.eclipse.persistence.session./file:/tmp/payaramicro-rt6453845595956336981tmp/applications/clinic-domain/WEB-INF/lib/clinic-domain-1.0.0.jar_clinic-domain.sql[0m] [tid: _ThreadID=74 _ThreadName=http-thread-pool::http-listener(2)] [timeMillis: 1744565814748] [levelValue: 500] [[
+  SELECT t0.ID, t0.DTYPE, t0.DIAGNOSIS, t0.TREATMENTID, t0.PATIENT_ID, t0.PROVIDER_ID, t1.ID, t1.DISCHARGEINSTRUCTIONS, t1.SURGERYDATE FROM TREATMENT t0, SURGERYTREATMENT t1 WHERE ((t0.PATIENT_ID = ?) AND ((t1.ID = t0.ID) AND (t0.DTYPE = ?)))
+	bind => [2 parameters bound]]]
+
+[2025-04-13T17:36:55.874+0000] [] [[1;92mINFO[0m] [] [[1;94medu.stevens.cs548.clinic.micro.domain.rest.PatientMicroService[0m] [tid: _ThreadID=73 _ThreadName=http-thread-pool::http-listener(1)] [timeMillis: 1744565815874] [levelValue: 800] getTreatment: Getting treatment 8b03949a-c42a-45c1-ac9e-45a6b73af007 in microservice!
+
+[2025-04-13T17:36:55.876+0000] [] [FINE[0m] [] [[1;94morg.eclipse.persistence.session./file:/tmp/payaramicro-rt6453845595956336981tmp/applications/clinic-domain/WEB-INF/lib/clinic-domain-1.0.0.jar_clinic-domain.sql[0m] [tid: _ThreadID=73 _ThreadName=http-thread-pool::http-listener(1)] [timeMillis: 1744565815876] [levelValue: 500] [[
+  SELECT ID, DOB, NAME, PATIENTID FROM PATIENT WHERE (PATIENTID = ?)
+	bind => [1 parameter bound]]]
+
+[2025-04-13T17:36:55.881+0000] [] [FINE[0m] [] [[1;94morg.eclipse.persistence.session./file:/tmp/payaramicro-rt6453845595956336981tmp/applications/clinic-domain/WEB-INF/lib/clinic-domain-1.0.0.jar_clinic-domain.sql[0m] [tid: _ThreadID=73 _ThreadName=http-thread-pool::http-listener(1)] [timeMillis: 1744565815881] [levelValue: 500] [[
+  SELECT ID, DOB, NAME, PATIENTID FROM PATIENT WHERE (ID = ?)
+	bind => [1 parameter bound]]]
+
+[2025-04-13T17:36:55.886+0000] [] [FINE[0m] [] [[1;94morg.eclipse.persistence.session./file:/tmp/payaramicro-rt6453845595956336981tmp/applications/clinic-domain/WEB-INF/lib/clinic-domain-1.0.0.jar_clinic-domain.sql[0m] [tid: _ThreadID=73 _ThreadName=http-thread-pool::http-listener(1)] [timeMillis: 1744565815886] [levelValue: 500] [[
+  SELECT DISTINCT DTYPE FROM TREATMENT WHERE (TREATMENTID = ?)
+	bind => [1 parameter bound]]]
+
+[2025-04-13T17:36:55.888+0000] [] [FINE[0m] [] [[1;94morg.eclipse.persistence.session./file:/tmp/payaramicro-rt6453845595956336981tmp/applications/clinic-domain/WEB-INF/lib/clinic-domain-1.0.0.jar_clinic-domain.sql[0m] [tid: _ThreadID=73 _ThreadName=http-thread-pool::http-listener(1)] [timeMillis: 1744565815888] [levelValue: 500] [[
+  SELECT t0.ID, t0.DTYPE, t0.DIAGNOSIS, t0.TREATMENTID, t0.PATIENT_ID, t0.PROVIDER_ID, t1.ID, t1.DOSAGE, t1.DRUG, t1.ENDDATE, t1.FREQUENCY, t1.STARTDATE FROM TREATMENT t0, DRUGTREATMENT t1 WHERE ((t0.TREATMENTID = ?) AND ((t1.ID = t0.ID) AND (t0.DTYPE = ?)))
+	bind => [2 parameters bound]]]
+
+[2025-04-13T17:36:55.894+0000] [] [FINE[0m] [] [[1;94morg.eclipse.persistence.session./file:/tmp/payaramicro-rt6453845595956336981tmp/applications/clinic-domain/WEB-INF/lib/clinic-domain-1.0.0.jar_clinic-domain.sql[0m] [tid: _ThreadID=73 _ThreadName=http-thread-pool::http-listener(1)] [timeMillis: 1744565815894] [levelValue: 500] [[
+  SELECT t0.ID, t0.DTYPE, t0.DIAGNOSIS, t0.TREATMENTID, t0.PATIENT_ID, t0.PROVIDER_ID, t1.ID, t1.DOSAGE, t1.DRUG, t1.ENDDATE, t1.FREQUENCY, t1.STARTDATE FROM TREATMENT t0, DRUGTREATMENT t1 WHERE ((t0.ID = ?) AND ((t1.ID = t0.ID) AND (t0.DTYPE = ?)))
+	bind => [2 parameters bound]]]
+
+[2025-04-13T17:36:55.905+0000] [] [FINE[0m] [] [[1;94morg.eclipse.persistence.session./file:/tmp/payaramicro-rt6453845595956336981tmp/applications/clinic-domain/WEB-INF/lib/clinic-domain-1.0.0.jar_clinic-domain.sql[0m] [tid: _ThreadID=73 _ThreadName=http-thread-pool::http-listener(1)] [timeMillis: 1744565815905] [levelValue: 500] [[
+  SELECT DISTINCT t1.DTYPE FROM TREATMENT_TREATMENT t0, TREATMENT t1 WHERE ((t0.Treatment_ID = ?) AND (t1.ID = t0.followupTreatments_ID))
+	bind => [1 parameter bound]]]
+
+[2025-04-13T17:36:55.908+0000] [] [FINE[0m] [] [[1;94morg.eclipse.persistence.session./file:/tmp/payaramicro-rt6453845595956336981tmp/applications/clinic-domain/WEB-INF/lib/clinic-domain-1.0.0.jar_clinic-domain.sql[0m] [tid: _ThreadID=73 _ThreadName=http-thread-pool::http-listener(1)] [timeMillis: 1744565815908] [levelValue: 500] [[
+  SELECT t0.ID, t0.DTYPE, t0.DIAGNOSIS, t0.TREATMENTID, t0.PATIENT_ID, t0.PROVIDER_ID, t1.ID, t1.DISCHARGEINSTRUCTIONS, t1.SURGERYDATE FROM TREATMENT t0, TREATMENT_TREATMENT t2, SURGERYTREATMENT t1 WHERE (((t2.Treatment_ID = ?) AND (t0.ID = t2.followupTreatments_ID)) AND ((t1.ID = t0.ID) AND (t0.DTYPE = ?)))
+	bind => [2 parameters bound]]]
+
+[2025-04-13T17:36:57.222+0000] [] [[1;92mINFO[0m] [] [[1;94medu.stevens.cs548.clinic.micro.domain.rest.PatientMicroService[0m] [tid: _ThreadID=74 _ThreadName=http-thread-pool::http-listener(2)] [timeMillis: 1744565817222] [levelValue: 800] getTreatment: Getting treatment db459bd0-0ef8-4e67-8b37-8dd18d0cfd52 in microservice!
+
+[2025-04-13T17:36:57.224+0000] [] [FINE[0m] [] [[1;94morg.eclipse.persistence.session./file:/tmp/payaramicro-rt6453845595956336981tmp/applications/clinic-domain/WEB-INF/lib/clinic-domain-1.0.0.jar_clinic-domain.sql[0m] [tid: _ThreadID=74 _ThreadName=http-thread-pool::http-listener(2)] [timeMillis: 1744565817224] [levelValue: 500] [[
+  SELECT ID, DOB, NAME, PATIENTID FROM PATIENT WHERE (PATIENTID = ?)
+	bind => [1 parameter bound]]]
+
+[2025-04-13T17:36:57.226+0000] [] [FINE[0m] [] [[1;94morg.eclipse.persistence.session./file:/tmp/payaramicro-rt6453845595956336981tmp/applications/clinic-domain/WEB-INF/lib/clinic-domain-1.0.0.jar_clinic-domain.sql[0m] [tid: _ThreadID=74 _ThreadName=http-thread-pool::http-listener(2)] [timeMillis: 1744565817226] [levelValue: 500] [[
+  SELECT ID, DOB, NAME, PATIENTID FROM PATIENT WHERE (ID = ?)
+	bind => [1 parameter bound]]]
+
+[2025-04-13T17:36:57.247+0000] [] [FINE[0m] [] [[1;94morg.eclipse.persistence.session./file:/tmp/payaramicro-rt6453845595956336981tmp/applications/clinic-domain/WEB-INF/lib/clinic-domain-1.0.0.jar_clinic-domain.sql[0m] [tid: _ThreadID=74 _ThreadName=http-thread-pool::http-listener(2)] [timeMillis: 1744565817247] [levelValue: 500] [[
+  SELECT DISTINCT DTYPE FROM TREATMENT WHERE (TREATMENTID = ?)
+	bind => [1 parameter bound]]]
+
+[2025-04-13T17:36:57.252+0000] [] [FINE[0m] [] [[1;94morg.eclipse.persistence.session./file:/tmp/payaramicro-rt6453845595956336981tmp/applications/clinic-domain/WEB-INF/lib/clinic-domain-1.0.0.jar_clinic-domain.sql[0m] [tid: _ThreadID=74 _ThreadName=http-thread-pool::http-listener(2)] [timeMillis: 1744565817252] [levelValue: 500] [[
+  SELECT t0.ID, t0.DTYPE, t0.DIAGNOSIS, t0.TREATMENTID, t0.PATIENT_ID, t0.PROVIDER_ID, t1.ID FROM TREATMENT t0, PHYSIOTHERAPYTREATMENT t1 WHERE ((t0.TREATMENTID = ?) AND ((t1.ID = t0.ID) AND (t0.DTYPE = ?)))
+	bind => [2 parameters bound]]]
+
+[2025-04-13T17:36:57.256+0000] [] [FINE[0m] [] [[1;94morg.eclipse.persistence.session./file:/tmp/payaramicro-rt6453845595956336981tmp/applications/clinic-domain/WEB-INF/lib/clinic-domain-1.0.0.jar_clinic-domain.sql[0m] [tid: _ThreadID=74 _ThreadName=http-thread-pool::http-listener(2)] [timeMillis: 1744565817256] [levelValue: 500] [[
+  SELECT t0.ID, t0.DTYPE, t0.DIAGNOSIS, t0.TREATMENTID, t0.PATIENT_ID, t0.PROVIDER_ID, t1.ID FROM TREATMENT t0, PHYSIOTHERAPYTREATMENT t1 WHERE ((t0.ID = ?) AND ((t1.ID = t0.ID) AND (t0.DTYPE = ?)))
+	bind => [2 parameters bound]]]
+
+[2025-04-13T17:36:59.071+0000] [] [[1;92mINFO[0m] [] [[1;94medu.stevens.cs548.clinic.micro.domain.rest.PatientMicroService[0m] [tid: _ThreadID=73 _ThreadName=http-thread-pool::http-listener(1)] [timeMillis: 1744565819071] [levelValue: 800] getTreatment: Getting treatment 04672aa3-734c-4502-92be-a5193ecb98a4 in microservice!
+
+[2025-04-13T17:36:59.073+0000] [] [FINE[0m] [] [[1;94morg.eclipse.persistence.session./file:/tmp/payaramicro-rt6453845595956336981tmp/applications/clinic-domain/WEB-INF/lib/clinic-domain-1.0.0.jar_clinic-domain.sql[0m] [tid: _ThreadID=73 _ThreadName=http-thread-pool::http-listener(1)] [timeMillis: 1744565819073] [levelValue: 500] [[
+  SELECT ID, DOB, NAME, PATIENTID FROM PATIENT WHERE (PATIENTID = ?)
+	bind => [1 parameter bound]]]
+
+[2025-04-13T17:36:59.075+0000] [] [FINE[0m] [] [[1;94morg.eclipse.persistence.session./file:/tmp/payaramicro-rt6453845595956336981tmp/applications/clinic-domain/WEB-INF/lib/clinic-domain-1.0.0.jar_clinic-domain.sql[0m] [tid: _ThreadID=73 _ThreadName=http-thread-pool::http-listener(1)] [timeMillis: 1744565819075] [levelValue: 500] [[
+  SELECT ID, DOB, NAME, PATIENTID FROM PATIENT WHERE (ID = ?)
+	bind => [1 parameter bound]]]
+
+[2025-04-13T17:36:59.078+0000] [] [FINE[0m] [] [[1;94morg.eclipse.persistence.session./file:/tmp/payaramicro-rt6453845595956336981tmp/applications/clinic-domain/WEB-INF/lib/clinic-domain-1.0.0.jar_clinic-domain.sql[0m] [tid: _ThreadID=73 _ThreadName=http-thread-pool::http-listener(1)] [timeMillis: 1744565819078] [levelValue: 500] [[
+  SELECT DISTINCT DTYPE FROM TREATMENT WHERE (TREATMENTID = ?)
+	bind => [1 parameter bound]]]
+
+[2025-04-13T17:36:59.087+0000] [] [FINE[0m] [] [[1;94morg.eclipse.persistence.session./file:/tmp/payaramicro-rt6453845595956336981tmp/applications/clinic-domain/WEB-INF/lib/clinic-domain-1.0.0.jar_clinic-domain.sql[0m] [tid: _ThreadID=73 _ThreadName=http-thread-pool::http-listener(1)] [timeMillis: 1744565819087] [levelValue: 500] [[
+  SELECT t0.ID, t0.DTYPE, t0.DIAGNOSIS, t0.TREATMENTID, t0.PATIENT_ID, t0.PROVIDER_ID, t1.ID FROM TREATMENT t0, RADIOLOGYTREATMENT t1 WHERE ((t0.TREATMENTID = ?) AND ((t1.ID = t0.ID) AND (t0.DTYPE = ?)))
+	bind => [2 parameters bound]]]
+
+[2025-04-13T17:36:59.092+0000] [] [FINE[0m] [] [[1;94morg.eclipse.persistence.session./file:/tmp/payaramicro-rt6453845595956336981tmp/applications/clinic-domain/WEB-INF/lib/clinic-domain-1.0.0.jar_clinic-domain.sql[0m] [tid: _ThreadID=73 _ThreadName=http-thread-pool::http-listener(1)] [timeMillis: 1744565819092] [levelValue: 500] [[
+  SELECT t0.ID, t0.DTYPE, t0.DIAGNOSIS, t0.TREATMENTID, t0.PATIENT_ID, t0.PROVIDER_ID, t1.ID FROM TREATMENT t0, RADIOLOGYTREATMENT t1 WHERE ((t0.ID = ?) AND ((t1.ID = t0.ID) AND (t0.DTYPE = ?)))
+	bind => [2 parameters bound]]]
+
+[2025-04-13T17:36:59.100+0000] [] [FINE[0m] [] [[1;94morg.eclipse.persistence.session./file:/tmp/payaramicro-rt6453845595956336981tmp/applications/clinic-domain/WEB-INF/lib/clinic-domain-1.0.0.jar_clinic-domain.sql[0m] [tid: _ThreadID=73 _ThreadName=http-thread-pool::http-listener(1)] [timeMillis: 1744565819100] [levelValue: 500] [[
+  SELECT DISTINCT t1.DTYPE FROM TREATMENT_TREATMENT t0, TREATMENT t1 WHERE ((t0.Treatment_ID = ?) AND (t1.ID = t0.followupTreatments_ID))
+	bind => [1 parameter bound]]]
+
+[2025-04-13T17:36:59.111+0000] [] [FINE[0m] [] [[1;94morg.eclipse.persistence.session./file:/tmp/payaramicro-rt6453845595956336981tmp/applications/clinic-domain/WEB-INF/lib/clinic-domain-1.0.0.jar_clinic-domain.sql[0m] [tid: _ThreadID=73 _ThreadName=http-thread-pool::http-listener(1)] [timeMillis: 1744565819111] [levelValue: 500] [[
+  SELECT t0.TREATMENTDATES FROM PhysiotherapyTreatment_TREATMENTDATES t0 WHERE (t0.PhysiotherapyTreatment_ID = ?) ORDER BY t0.TREATMENTDATES ASC
+	bind => [1 parameter bound]]]
+
+[2025-04-13T17:37:00.307+0000] [] [[1;92mINFO[0m] [] [[1;94medu.stevens.cs548.clinic.micro.domain.rest.PatientMicroService[0m] [tid: _ThreadID=74 _ThreadName=http-thread-pool::http-listener(2)] [timeMillis: 1744565820307] [levelValue: 800] getTreatment: Getting treatment 611fd3d4-5ea7-4479-9090-5c59064eab15 in microservice!
+
+[2025-04-13T17:37:00.311+0000] [] [FINE[0m] [] [[1;94morg.eclipse.persistence.session./file:/tmp/payaramicro-rt6453845595956336981tmp/applications/clinic-domain/WEB-INF/lib/clinic-domain-1.0.0.jar_clinic-domain.sql[0m] [tid: _ThreadID=74 _ThreadName=http-thread-pool::http-listener(2)] [timeMillis: 1744565820311] [levelValue: 500] [[
+  SELECT ID, DOB, NAME, PATIENTID FROM PATIENT WHERE (PATIENTID = ?)
+	bind => [1 parameter bound]]]
+
+[2025-04-13T17:37:00.313+0000] [] [FINE[0m] [] [[1;94morg.eclipse.persistence.session./file:/tmp/payaramicro-rt6453845595956336981tmp/applications/clinic-domain/WEB-INF/lib/clinic-domain-1.0.0.jar_clinic-domain.sql[0m] [tid: _ThreadID=74 _ThreadName=http-thread-pool::http-listener(2)] [timeMillis: 1744565820313] [levelValue: 500] [[
+  SELECT ID, DOB, NAME, PATIENTID FROM PATIENT WHERE (ID = ?)
+	bind => [1 parameter bound]]]
+
+[2025-04-13T17:37:00.317+0000] [] [FINE[0m] [] [[1;94morg.eclipse.persistence.session./file:/tmp/payaramicro-rt6453845595956336981tmp/applications/clinic-domain/WEB-INF/lib/clinic-domain-1.0.0.jar_clinic-domain.sql[0m] [tid: _ThreadID=74 _ThreadName=http-thread-pool::http-listener(2)] [timeMillis: 1744565820317] [levelValue: 500] [[
+  SELECT DISTINCT DTYPE FROM TREATMENT WHERE (TREATMENTID = ?)
+	bind => [1 parameter bound]]]
+
+[2025-04-13T17:37:00.327+0000] [] [FINE[0m] [] [[1;94morg.eclipse.persistence.session./file:/tmp/payaramicro-rt6453845595956336981tmp/applications/clinic-domain/WEB-INF/lib/clinic-domain-1.0.0.jar_clinic-domain.sql[0m] [tid: _ThreadID=74 _ThreadName=http-thread-pool::http-listener(2)] [timeMillis: 1744565820327] [levelValue: 500] [[
+  SELECT t0.ID, t0.DTYPE, t0.DIAGNOSIS, t0.TREATMENTID, t0.PATIENT_ID, t0.PROVIDER_ID, t1.ID, t1.DISCHARGEINSTRUCTIONS, t1.SURGERYDATE FROM TREATMENT t0, SURGERYTREATMENT t1 WHERE ((t0.TREATMENTID = ?) AND ((t1.ID = t0.ID) AND (t0.DTYPE = ?)))
+	bind => [2 parameters bound]]]
+
+[2025-04-13T17:37:00.331+0000] [] [FINE[0m] [] [[1;94morg.eclipse.persistence.session./file:/tmp/payaramicro-rt6453845595956336981tmp/applications/clinic-domain/WEB-INF/lib/clinic-domain-1.0.0.jar_clinic-domain.sql[0m] [tid: _ThreadID=74 _ThreadName=http-thread-pool::http-listener(2)] [timeMillis: 1744565820331] [levelValue: 500] [[
+  SELECT t0.ID, t0.DTYPE, t0.DIAGNOSIS, t0.TREATMENTID, t0.PATIENT_ID, t0.PROVIDER_ID, t1.ID, t1.DISCHARGEINSTRUCTIONS, t1.SURGERYDATE FROM TREATMENT t0, SURGERYTREATMENT t1 WHERE ((t0.ID = ?) AND ((t1.ID = t0.ID) AND (t0.DTYPE = ?)))
+	bind => [2 parameters bound]]]
+
+[2025-04-13T17:37:00.337+0000] [] [FINE[0m] [] [[1;94morg.eclipse.persistence.session./file:/tmp/payaramicro-rt6453845595956336981tmp/applications/clinic-domain/WEB-INF/lib/clinic-domain-1.0.0.jar_clinic-domain.sql[0m] [tid: _ThreadID=74 _ThreadName=http-thread-pool::http-listener(2)] [timeMillis: 1744565820337] [levelValue: 500] [[
+  SELECT DISTINCT t1.DTYPE FROM TREATMENT_TREATMENT t0, TREATMENT t1 WHERE ((t0.Treatment_ID = ?) AND (t1.ID = t0.followupTreatments_ID))
+	bind => [1 parameter bound]]]
+
+[2025-04-13T17:37:00.340+0000] [] [FINE[0m] [] [[1;94morg.eclipse.persistence.session./file:/tmp/payaramicro-rt6453845595956336981tmp/applications/clinic-domain/WEB-INF/lib/clinic-domain-1.0.0.jar_clinic-domain.sql[0m] [tid: _ThreadID=74 _ThreadName=http-thread-pool::http-listener(2)] [timeMillis: 1744565820340] [levelValue: 500] [[
+  SELECT t0.ID, t0.DTYPE, t0.DIAGNOSIS, t0.TREATMENTID, t0.PATIENT_ID, t0.PROVIDER_ID, t1.ID FROM TREATMENT t0, TREATMENT_TREATMENT t2, PHYSIOTHERAPYTREATMENT t1 WHERE (((t2.Treatment_ID = ?) AND (t0.ID = t2.followupTreatments_ID)) AND ((t1.ID = t0.ID) AND (t0.DTYPE = ?)))
+	bind => [2 parameters bound]]]
+
+[2025-04-13T17:37:00.349+0000] [] [FINE[0m] [] [[1;94morg.eclipse.persistence.session./file:/tmp/payaramicro-rt6453845595956336981tmp/applications/clinic-domain/WEB-INF/lib/clinic-domain-1.0.0.jar_clinic-domain.sql[0m] [tid: _ThreadID=74 _ThreadName=http-thread-pool::http-listener(2)] [timeMillis: 1744565820349] [levelValue: 500] [[
+  SELECT t0.TREATMENTDATES FROM RadiologyTreatment_TREATMENTDATES t0 WHERE (t0.RadiologyTreatment_ID = ?) ORDER BY t0.TREATMENTDATES ASC
+	bind => [1 parameter bound]]]
+
+[2025-04-13T17:37:02.949+0000] [] [[1;92mINFO[0m] [] [[1;94medu.stevens.cs548.clinic.micro.domain.rest.ProviderMicroService[0m] [tid: _ThreadID=73 _ThreadName=http-thread-pool::http-listener(1)] [timeMillis: 1744565822949] [levelValue: 800] getProviders: Getting all providers in microservice!
+
+[2025-04-13T17:37:02.957+0000] [] [FINE[0m] [] [[1;94morg.eclipse.persistence.session./file:/tmp/payaramicro-rt6453845595956336981tmp/applications/clinic-domain/WEB-INF/lib/clinic-domain-1.0.0.jar_clinic-domain.sql[0m] [tid: _ThreadID=73 _ThreadName=http-thread-pool::http-listener(1)] [timeMillis: 1744565822957] [levelValue: 500] SELECT ID, NAME, NPI, PROVIDERID FROM PROVIDER
+
+[2025-04-13T17:37:03.727+0000] [] [[1;92mINFO[0m] [] [[1;94medu.stevens.cs548.clinic.micro.domain.rest.ProviderMicroService[0m] [tid: _ThreadID=74 _ThreadName=http-thread-pool::http-listener(2)] [timeMillis: 1744565823727] [levelValue: 800] getProvider: Getting provider 82783d42-38a4-48df-8448-e10e3ea6514c in microservice!
+
+[2025-04-13T17:37:03.728+0000] [] [FINE[0m] [] [[1;94morg.eclipse.persistence.session./file:/tmp/payaramicro-rt6453845595956336981tmp/applications/clinic-domain/WEB-INF/lib/clinic-domain-1.0.0.jar_clinic-domain.sql[0m] [tid: _ThreadID=74 _ThreadName=http-thread-pool::http-listener(2)] [timeMillis: 1744565823728] [levelValue: 500] [[
+  SELECT ID, NAME, NPI, PROVIDERID FROM PROVIDER WHERE (PROVIDERID = ?)
+	bind => [1 parameter bound]]]
+
+[2025-04-13T17:37:03.731+0000] [] [FINE[0m] [] [[1;94morg.eclipse.persistence.session./file:/tmp/payaramicro-rt6453845595956336981tmp/applications/clinic-domain/WEB-INF/lib/clinic-domain-1.0.0.jar_clinic-domain.sql[0m] [tid: _ThreadID=74 _ThreadName=http-thread-pool::http-listener(2)] [timeMillis: 1744565823731] [levelValue: 500] [[
+  SELECT ID, NAME, NPI, PROVIDERID FROM PROVIDER WHERE (ID = ?)
+	bind => [1 parameter bound]]]
+
+[2025-04-13T17:37:03.736+0000] [] [FINE[0m] [] [[1;94morg.eclipse.persistence.session./file:/tmp/payaramicro-rt6453845595956336981tmp/applications/clinic-domain/WEB-INF/lib/clinic-domain-1.0.0.jar_clinic-domain.sql[0m] [tid: _ThreadID=74 _ThreadName=http-thread-pool::http-listener(2)] [timeMillis: 1744565823736] [levelValue: 500] [[
+  SELECT DISTINCT DTYPE FROM TREATMENT WHERE (PROVIDER_ID = ?)
+	bind => [1 parameter bound]]]
+
+[2025-04-13T17:37:03.738+0000] [] [FINE[0m] [] [[1;94morg.eclipse.persistence.session./file:/tmp/payaramicro-rt6453845595956336981tmp/applications/clinic-domain/WEB-INF/lib/clinic-domain-1.0.0.jar_clinic-domain.sql[0m] [tid: _ThreadID=74 _ThreadName=http-thread-pool::http-listener(2)] [timeMillis: 1744565823738] [levelValue: 500] [[
+  SELECT t0.ID, t0.DTYPE, t0.DIAGNOSIS, t0.TREATMENTID, t0.PATIENT_ID, t0.PROVIDER_ID, t1.ID, t1.DOSAGE, t1.DRUG, t1.ENDDATE, t1.FREQUENCY, t1.STARTDATE FROM TREATMENT t0, DRUGTREATMENT t1 WHERE ((t0.PROVIDER_ID = ?) AND ((t1.ID = t0.ID) AND (t0.DTYPE = ?)))
+	bind => [2 parameters bound]]]
+
+[2025-04-13T17:37:03.742+0000] [] [FINE[0m] [] [[1;94morg.eclipse.persistence.session./file:/tmp/payaramicro-rt6453845595956336981tmp/applications/clinic-domain/WEB-INF/lib/clinic-domain-1.0.0.jar_clinic-domain.sql[0m] [tid: _ThreadID=74 _ThreadName=http-thread-pool::http-listener(2)] [timeMillis: 1744565823742] [levelValue: 500] [[
+  SELECT t0.ID, t0.DTYPE, t0.DIAGNOSIS, t0.TREATMENTID, t0.PATIENT_ID, t0.PROVIDER_ID, t1.ID FROM TREATMENT t0, PHYSIOTHERAPYTREATMENT t1 WHERE ((t0.PROVIDER_ID = ?) AND ((t1.ID = t0.ID) AND (t0.DTYPE = ?)))
+	bind => [2 parameters bound]]]
+
+[2025-04-13T17:37:03.745+0000] [] [FINE[0m] [] [[1;94morg.eclipse.persistence.session./file:/tmp/payaramicro-rt6453845595956336981tmp/applications/clinic-domain/WEB-INF/lib/clinic-domain-1.0.0.jar_clinic-domain.sql[0m] [tid: _ThreadID=74 _ThreadName=http-thread-pool::http-listener(2)] [timeMillis: 1744565823745] [levelValue: 500] [[
+  SELECT t0.ID, t0.DTYPE, t0.DIAGNOSIS, t0.TREATMENTID, t0.PATIENT_ID, t0.PROVIDER_ID, t1.ID FROM TREATMENT t0, RADIOLOGYTREATMENT t1 WHERE ((t0.PROVIDER_ID = ?) AND ((t1.ID = t0.ID) AND (t0.DTYPE = ?)))
+	bind => [2 parameters bound]]]
+
+[2025-04-13T17:37:03.754+0000] [] [FINE[0m] [] [[1;94morg.eclipse.persistence.session./file:/tmp/payaramicro-rt6453845595956336981tmp/applications/clinic-domain/WEB-INF/lib/clinic-domain-1.0.0.jar_clinic-domain.sql[0m] [tid: _ThreadID=74 _ThreadName=http-thread-pool::http-listener(2)] [timeMillis: 1744565823754] [levelValue: 500] [[
+  SELECT t0.ID, t0.DTYPE, t0.DIAGNOSIS, t0.TREATMENTID, t0.PATIENT_ID, t0.PROVIDER_ID, t1.ID, t1.DISCHARGEINSTRUCTIONS, t1.SURGERYDATE FROM TREATMENT t0, SURGERYTREATMENT t1 WHERE ((t0.PROVIDER_ID = ?) AND ((t1.ID = t0.ID) AND (t0.DTYPE = ?)))
+	bind => [2 parameters bound]]]
+
+[2025-04-13T17:37:05.316+0000] [] [[1;92mINFO[0m] [] [[1;94medu.stevens.cs548.clinic.micro.domain.rest.PatientMicroService[0m] [tid: _ThreadID=73 _ThreadName=http-thread-pool::http-listener(1)] [timeMillis: 1744565825316] [levelValue: 800] getPatients: Getting all patients in microservice!
+
+[2025-04-13T17:37:05.318+0000] [] [FINE[0m] [] [[1;94morg.eclipse.persistence.session./file:/tmp/payaramicro-rt6453845595956336981tmp/applications/clinic-domain/WEB-INF/lib/clinic-domain-1.0.0.jar_clinic-domain.sql[0m] [tid: _ThreadID=73 _ThreadName=http-thread-pool::http-listener(1)] [timeMillis: 1744565825318] [levelValue: 500] SELECT ID, DOB, NAME, PATIENTID FROM PATIENT
+

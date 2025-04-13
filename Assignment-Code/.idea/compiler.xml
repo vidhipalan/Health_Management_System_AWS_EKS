@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="clinic-rest-client" />
+        <module name="clinic-domain" />
+        <module name="clinic-rest" />
+        <module name="clinic-webapp" />
+        <module name="clinic-init" />
+        <module name="clinic-microservice" />
+        <module name="clinic-dto" />
+        <module name="clinic-service-client" />
+        <module name="clinic-microservice-client" />
+      </profile>
+    </annotationProcessing>
+  </component>
+</project>

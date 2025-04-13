@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: clinic-rest
+  labels:
+    app: clinic-rest
+spec:
+  type: LoadBalancer
+  ports:
+  - name: http
+    port: 9090
+    targetPort: 8080
+  selector:
+    app: clinic-rest
